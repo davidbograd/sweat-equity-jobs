@@ -8,14 +8,18 @@ interface Company {
   year: string;
   location: string;
   workType: string;
-  logo?: string;
+  allLocations?: string[];
 }
 
 interface CompaniesGridProps {
   companies: Company[];
+  currentCity?: string;
 }
 
-export default function CompaniesGrid({ companies }: CompaniesGridProps) {
+export default function CompaniesGrid({
+  companies,
+  currentCity,
+}: CompaniesGridProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {companies.map((company) => (
@@ -27,7 +31,8 @@ export default function CompaniesGrid({ companies }: CompaniesGridProps) {
           year={company.year}
           location={company.location}
           workType={company.workType}
-          logo={company.logo}
+          allLocations={company.allLocations}
+          currentCity={currentCity}
         />
       ))}
     </div>

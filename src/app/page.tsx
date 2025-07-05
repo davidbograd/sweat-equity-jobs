@@ -1,82 +1,6 @@
 import CompaniesStats from "../components/CompaniesStats";
 import CompaniesGrid from "../components/CompaniesGrid";
-
-// Sample data - replace with actual data from your API
-const sampleCompanies = [
-  {
-    id: "1",
-    name: "Amber Electric",
-    website: "amberelectric.com.au",
-    description:
-      "Project management and client work management platform for service businesses",
-    year: "2017",
-    location: "Melbourne",
-    workType: "Remote",
-  },
-  {
-    id: "2",
-    name: "Amber Electric",
-    website: "amberelectric.com.au",
-    description: "Automated investing & superannuation platform",
-    year: "2017",
-    location: "Melbourne",
-    workType: "Remote",
-  },
-  {
-    id: "3",
-    name: "Amber Electric",
-    website: "amberelectric.com.au",
-    description: "Automated investing & superannuation platform",
-    year: "2017",
-    location: "Melbourne",
-    workType: "Remote",
-  },
-  {
-    id: "4",
-    name: "Amber Electric",
-    website: "amberelectric.com.au",
-    description: "Automated investing & superannuation platform",
-    year: "2017",
-    location: "Melbourne",
-    workType: "Remote",
-  },
-  {
-    id: "5",
-    name: "Amber Electric",
-    website: "amberelectric.com.au",
-    description: "Automated investing & superannuation platform",
-    year: "2017",
-    location: "Melbourne",
-    workType: "Remote",
-  },
-  {
-    id: "6",
-    name: "Amber Electric",
-    website: "amberelectric.com.au",
-    description: "Automated investing & superannuation platform",
-    year: "2017",
-    location: "Melbourne",
-    workType: "Remote",
-  },
-  {
-    id: "7",
-    name: "Amber Electric",
-    website: "amberelectric.com.au",
-    description: "Automated investing & superannuation platform",
-    year: "2017",
-    location: "Melbourne",
-    workType: "Remote",
-  },
-  {
-    id: "8",
-    name: "Amber Electric",
-    website: "amberelectric.com.au",
-    description: "Automated investing & superannuation platform",
-    year: "2017",
-    location: "Melbourne",
-    workType: "Remote",
-  },
-];
+import companies from "../data/companies.json";
 
 export default function Home() {
   return (
@@ -100,7 +24,7 @@ export default function Home() {
         {/* CTA Link */}
         <div className="mb-16">
           <a
-            href="#"
+            href="#companies"
             className="hover:underline hover:underline-offset-8 inline-block text-2xl"
           >
             See the full list →
@@ -110,37 +34,37 @@ export default function Home() {
         {/* Location Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-16 max-w-2xl mx-auto">
           <a
-            href="#"
+            href="/sydney"
             className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
           >
             Sydney companies →
           </a>
           <a
-            href="#"
+            href="/melbourne"
             className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
           >
             Melbourne companies →
           </a>
           <a
-            href="#"
+            href="/brisbane"
             className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
           >
             Brisbane companies →
           </a>
           <a
-            href="#"
+            href="/perth"
             className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
           >
             Perth companies →
           </a>
           <a
-            href="#"
+            href="/adelaide"
             className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
           >
             Adelaide companies →
           </a>
           <a
-            href="#"
+            href="/canberra"
             className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
           >
             Canberra companies →
@@ -173,18 +97,18 @@ export default function Home() {
         </div>
 
         {/* Companies Section */}
-        <section className="text-left">
+        <section id="companies" className="text-left">
           <h2 className="text-5xl text-black mb-6">
             All companies offering equity
           </h2>
 
           <CompaniesStats
-            companiesCount={371}
+            companiesCount={companies.length}
             citiesCount={6}
             workArrangementsCount={3}
           />
 
-          <CompaniesGrid companies={sampleCompanies} />
+          <CompaniesGrid companies={companies} />
         </section>
       </main>
     </div>
