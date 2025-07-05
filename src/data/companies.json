@@ -403,5 +403,21 @@
     "allWorkTypes": [
       "Hybrid"
     ]
+  },
+  {
+    "id": "25",
+    "name": "Simply Wall St",
+    "website": "simplywall.st",
+    "description": "Investment research platform",
+    "year": "2014",
+    "location": "Sydney",
+    "workType": "Remote",
+    "allLocations": [
+      "Sydney",
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
   }
 ]

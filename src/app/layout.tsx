@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Find Australian companies giving startup equity - Sweat Equity Jobs",
@@ -19,7 +20,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased font-satoshi">{children}</body>
+      <body className="antialiased font-satoshi">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

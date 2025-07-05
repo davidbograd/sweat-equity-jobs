@@ -1,6 +1,6 @@
 "use client";
 
-import { Calendar, MapPin, Briefcase } from "lucide-react";
+import { CalendarHeart, MapPin, Briefcase } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -86,12 +86,12 @@ export default function CompanyCard({
           <div className="w-6 h-1 bg-orange-400 rounded-full hidden"></div>
         </div>
         <div>
-          <h3 className="text-lg text-black">{name}</h3>
+          <h3 className="text-black">{name}</h3>
           <a
             href={`https://${website}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-gray-600 hover:text-gray-800 hover:underline hover:underline-offset-4"
+            className="text-black opacity-65 hover:underline hover:underline-offset-4"
           >
             {website}
           </a>
@@ -99,14 +99,14 @@ export default function CompanyCard({
       </div>
 
       {/* Description */}
-      <p className="text-gray-700 mb-6 leading-relaxed flex-grow">
+      <p className="text-black opacity-65 mb-6 leading-relaxed flex-grow">
         {description}
       </p>
 
       {/* Meta Information - Always at bottom */}
-      <div className="flex items-center gap-4 text-sm text-gray-500 mt-auto">
-        <div className="flex items-center gap-1">
-          <Calendar className="w-4 h-4" />
+      <div className="flex items-center gap-6 text-sm text-black opacity-65 mt-auto">
+        <div className="flex items-center gap-2">
+          <CalendarHeart className="w-4 h-4" />
           <span>{year}</span>
         </div>
         {allLocations && allLocations.length > 1 ? (

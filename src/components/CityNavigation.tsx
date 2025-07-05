@@ -1,8 +1,12 @@
 interface CityNavigationProps {
   currentCity?: string;
+  currentPage?: "remote" | "city";
 }
 
-export default function CityNavigation({ currentCity }: CityNavigationProps) {
+export default function CityNavigation({
+  currentCity,
+  currentPage,
+}: CityNavigationProps) {
   const cities = [
     { name: "Sydney", path: "/sydney" },
     { name: "Melbourne", path: "/melbourne" },
@@ -19,9 +23,13 @@ export default function CityNavigation({ currentCity }: CityNavigationProps) {
       )
     : cities;
 
+  const showRemoteLink = currentPage !== "remote";
+
   return (
     <div className="mt-16 pt-8 border-t border-gray-200">
-      <h3 className="text-2xl text-black mb-6">Other cities</h3>
+      <h3 className="text-2xl text-black mb-6">
+        {currentPage === "remote" ? "Browse by city" : "Other locations"}
+      </h3>
       <div className="flex flex-wrap gap-4 max-w-2xl mb-4">
         <a
           href="/"
@@ -31,6 +39,14 @@ export default function CityNavigation({ currentCity }: CityNavigationProps) {
         </a>
       </div>
       <div className="flex flex-wrap gap-4 max-w-2xl">
+        {showRemoteLink && (
+          <a
+            href="/remote"
+            className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+          >
+            Remote companies →
+          </a>
+        )}
         {filteredCities.map((city) => (
           <a
             key={city.name}
