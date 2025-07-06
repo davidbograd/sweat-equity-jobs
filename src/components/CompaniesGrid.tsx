@@ -1,15 +1,5 @@
 import CompanyCard from "./CompanyCard";
-
-interface Company {
-  id: string;
-  name: string;
-  website: string;
-  description: string;
-  year: string;
-  location: string;
-  workType: string;
-  allLocations?: string[];
-}
+import type { Company } from "../lib/types";
 
 interface CompaniesGridProps {
   companies: Company[];

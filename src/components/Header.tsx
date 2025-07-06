@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface HeaderProps {
   isHomePage?: boolean;
 }
@@ -10,9 +12,9 @@ export default function Header({ isHomePage = false }: HeaderProps) {
       {isHomePage ? (
         <div className="text-lg text-black">{content}</div>
       ) : (
-        <a href="/" className="text-lg text-black hover:text-gray-800">
+        <Link href="/" className="text-lg text-black hover:text-gray-800">
           {content}
-        </a>
+        </Link>
       )}
     </header>
   );

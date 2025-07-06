@@ -5,18 +5,17 @@ import CompaniesGrid from "../../components/CompaniesGrid";
 import CityNavigation from "../../components/CityNavigation";
 import Header from "../../components/Header";
 import companies from "../../data/companies.json";
-
-interface CityPageProps {
-  params: {
-    city: string;
-  };
-}
+import {
+  generateBreadcrumbSchema,
+  generateItemListSchema,
+} from "../../lib/structuredData";
+import type { Company, CityPageProps } from "../../lib/types";
 
 // Generate metadata for the city page
 export async function generateMetadata({
   params,
 }: CityPageProps): Promise<Metadata> {
-  const { city } = params;
+  const { city } = await params;
   const capitalizedCity = city.charAt(0).toUpperCase() + city.slice(1);
 
   return {
@@ -41,9 +40,8 @@ function capitalizeCityName(city: string): string {
 }
 
 // Helper function to filter companies by city
-function filterCompaniesByCity(city: string) {
-  const normalizedCity = capitalizeCityName(city);
-  return companies.filter(
+function filterCompaniesByCity(city: string): Company[] {
+  return (companies as Company[]).filter(
     (company) =>
       company.location.toLowerCase() === city.toLowerCase() ||
       (company.allLocations &&
@@ -54,7 +52,7 @@ function filterCompaniesByCity(city: string) {
 }
 
 // Helper function to get unique cities count
-function getUniqueCitiesCount(filteredCompanies: any[]) {
+function getUniqueCitiesCount(filteredCompanies: Company[]): number {
   const cities = new Set<string>();
   filteredCompanies.forEach((company) => {
     cities.add(company.location);
@@ -66,7 +64,7 @@ function getUniqueCitiesCount(filteredCompanies: any[]) {
 }
 
 // Helper function to get unique work arrangements count
-function getUniqueWorkArrangementsCount(filteredCompanies: any[]) {
+function getUniqueWorkArrangementsCount(filteredCompanies: Company[]): number {
   const workTypes = new Set<string>();
   filteredCompanies.forEach((company) => {
     if (company.allWorkTypes) {
@@ -79,58 +77,31 @@ function getUniqueWorkArrangementsCount(filteredCompanies: any[]) {
 }
 
 // Generate structured data for city pages
-function generateCityStructuredData(city: string, filteredCompanies: any[]) {
+function generateCityStructuredData(
+  city: string,
+  filteredCompanies: Company[]
+) {
   const capitalizedCity = capitalizeCityName(city);
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://sweatequityjobs.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: `${capitalizedCity} Companies`,
-        item: `https://sweatequityjobs.com/${city.toLowerCase()}`,
-      },
-    ],
-  };
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://sweatequityjobs.com" },
+    {
+      name: `${capitalizedCity} Companies`,
+      url: `https://sweatequityjobs.com/${city.toLowerCase()}`,
+    },
+  ]);
 
-  const itemListSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: `${capitalizedCity} Companies Offering Equity`,
-    description: `Australian startups in ${capitalizedCity} offering equity compensation`,
-    numberOfItems: filteredCompanies.length,
-    itemListElement: filteredCompanies.map((company, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Organization",
-        name: company.name,
-        url: `https://${company.website}`,
-        description: company.description,
-        foundingDate: company.year,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: company.location,
-          addressCountry: "AU",
-        },
-        workArrangement: company.allWorkTypes || [company.workType],
-      },
-    })),
-  };
+  const itemListSchema = generateItemListSchema(
+    filteredCompanies,
+    `${capitalizedCity} Companies Offering Equity`,
+    `Australian startups in ${capitalizedCity} offering equity compensation`
+  );
 
   return [breadcrumbSchema, itemListSchema];
 }
 
-export default function CityPage({ params }: CityPageProps) {
-  const { city } = params;
+export default async function CityPage({ params }: CityPageProps) {
+  const { city } = await params;
 
   // Check if city is valid
   if (!validCities.includes(city.toLowerCase())) {

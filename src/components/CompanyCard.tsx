@@ -7,6 +7,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import type { CompanyCardProps } from "../lib/types";
 
 // Helper function to generate logo.dev URL
 const generateLogoUrl = (website: string) => {
@@ -18,17 +19,6 @@ const generateLogoUrl = (website: string) => {
 
   return `https://img.logo.dev/${cleanDomain}?token=pk_YiqSJOVUStasZ4yEls7iTw&size=48&retina=true`;
 };
-
-interface CompanyCardProps {
-  name: string;
-  website: string;
-  description: string;
-  year: string;
-  location: string;
-  workType: string;
-  allLocations?: string[];
-  currentCity?: string;
-}
 
 export default function CompanyCard({
   name,

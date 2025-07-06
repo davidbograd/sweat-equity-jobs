@@ -4,6 +4,11 @@ import CompaniesGrid from "../../components/CompaniesGrid";
 import CityNavigation from "../../components/CityNavigation";
 import Header from "../../components/Header";
 import companies from "../../data/companies.json";
+import {
+  generateBreadcrumbSchema,
+  generateItemListSchema,
+} from "../../lib/structuredData";
+import type { Company } from "../../lib/types";
 
 // Metadata for the remote page
 export const metadata: Metadata = {
@@ -13,8 +18,8 @@ export const metadata: Metadata = {
 };
 
 // Helper function to filter companies that offer remote work
-function filterRemoteCompanies() {
-  return companies.filter(
+function filterRemoteCompanies(): Company[] {
+  return (companies as Company[]).filter(
     (company) =>
       company.workType.toLowerCase() === "remote" ||
       (company.allWorkTypes &&
@@ -23,7 +28,7 @@ function filterRemoteCompanies() {
 }
 
 // Helper function to get unique cities count for remote companies
-function getUniqueCitiesCount(filteredCompanies: any[]) {
+function getUniqueCitiesCount(filteredCompanies: Company[]): number {
   const cities = new Set<string>();
   filteredCompanies.forEach((company) => {
     cities.add(company.location);
@@ -35,7 +40,7 @@ function getUniqueCitiesCount(filteredCompanies: any[]) {
 }
 
 // Helper function to get unique work arrangements count for remote companies
-function getUniqueWorkArrangementsCount(filteredCompanies: any[]) {
+function getUniqueWorkArrangementsCount(filteredCompanies: Company[]): number {
   const workTypes = new Set<string>();
   filteredCompanies.forEach((company) => {
     if (company.allWorkTypes) {
@@ -48,51 +53,17 @@ function getUniqueWorkArrangementsCount(filteredCompanies: any[]) {
 }
 
 // Generate structured data for remote page
-function generateRemoteStructuredData(filteredCompanies: any[]) {
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://sweatequityjobs.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Remote Companies",
-        item: "https://sweatequityjobs.com/remote",
-      },
-    ],
-  };
+function generateRemoteStructuredData(filteredCompanies: Company[]) {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://sweatequityjobs.com" },
+    { name: "Remote Companies", url: "https://sweatequityjobs.com/remote" },
+  ]);
 
-  const itemListSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Remote Companies Offering Equity",
-    description:
-      "Australian startups offering remote work and equity compensation",
-    numberOfItems: filteredCompanies.length,
-    itemListElement: filteredCompanies.map((company, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Organization",
-        name: company.name,
-        url: `https://${company.website}`,
-        description: company.description,
-        foundingDate: company.year,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: company.location,
-          addressCountry: "AU",
-        },
-        workArrangement: company.allWorkTypes || [company.workType],
-      },
-    })),
-  };
+  const itemListSchema = generateItemListSchema(
+    filteredCompanies,
+    "Remote Companies Offering Equity",
+    "Australian startups offering remote work and equity compensation"
+  );
 
   return [breadcrumbSchema, itemListSchema];
 }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface CityNavigationProps {
   currentCity?: string;
   currentPage?: "remote" | "city";
@@ -31,30 +33,30 @@ export default function CityNavigation({
         {currentPage === "remote" ? "Browse by city" : "Other locations"}
       </h3>
       <div className="flex flex-wrap gap-4 max-w-2xl mb-4">
-        <a
+        <Link
           href="/"
           className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65 font-medium"
         >
           ← Back to all companies
-        </a>
+        </Link>
       </div>
       <div className="flex flex-wrap gap-4 max-w-2xl">
         {showRemoteLink && (
-          <a
+          <Link
             href="/remote"
             className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
           >
             Remote companies →
-          </a>
+          </Link>
         )}
         {filteredCities.map((city) => (
-          <a
+          <Link
             key={city.name}
             href={city.path}
             className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
           >
             {city.name} companies →
-          </a>
+          </Link>
         ))}
       </div>
     </div>
