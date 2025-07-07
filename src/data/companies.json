@@ -1,134 +1,126 @@
 [
   {
     "id": "1",
-    "name": "Amber Electric",
-    "website": "amberelectric.com.au",
-    "description": "Electricity Retail & Smart Energy",
-    "year": "2017",
+    "name": "6clicks",
+    "website": "6clicks.com",
+    "description": "AI-driven risk and compliance software platform",
+    "year": "2019",
     "location": "Melbourne",
     "workType": "Remote",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Accelo",
+    "website": "accelo.com",
+    "description": "Project management and client work management platform for service businesses",
+    "year": "2011",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Advanced Navigation",
+    "website": "advancednavigation.com.au",
+    "description": "Global leader in navigation and autonomous systems.",
+    "year": "2012",
+    "location": "Sydney",
+    "workType": "On-site",
+    "allLocations": [
+      "Sydney",
+      "Canberra",
+      "Perth"
+    ],
+    "allWorkTypes": [
+      "On-site"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "AgriDigital",
+    "website": "agridigital.io",
+    "description": "Digital commodity management and supply chain platform for agriculture",
+    "year": "2015",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid",
+      "Remote"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Airwallex",
+    "website": "airwallex.com",
+    "description": "Global payments and financial infrastructure for businesses",
+    "year": "2015",
+    "location": "Melbourne",
+    "workType": "Hybrid",
     "allLocations": [
       "Melbourne",
       "Sydney"
     ],
     "allWorkTypes": [
-      "Remote",
-      "Hybrid",
-      "Onsite"
-    ]
-  },
-  {
-    "id": "2",
-    "name": "Applied",
-    "website": "beapplied.com",
-    "description": "Skills-based hiring and recruitment assessment platform",
-    "year": "2014",
-    "location": "Perth",
-    "workType": "Remote",
-    "allLocations": [
-      "Perth"
-    ],
-    "allWorkTypes": [
-      "Remote"
-    ]
-  },
-  {
-    "id": "3",
-    "name": "Castlepoint Systems",
-    "website": "castlepoint.systems",
-    "description": "Records & Information Governance",
-    "year": "2012",
-    "location": "Canberra",
-    "workType": "Onsite",
-    "allLocations": [
-      "Canberra"
-    ],
-    "allWorkTypes": [
-      "Onsite"
-    ]
-  },
-  {
-    "id": "4",
-    "name": "Canva",
-    "website": "canva.com",
-    "description": "Design platform that empowers everyone to design",
-    "year": "2013",
-    "location": "Sydney",
-    "workType": "Remote",
-    "allLocations": [
-      "Sydney",
-      "Melbourne",
-      "Brisbane"
-    ],
-    "allWorkTypes": [
-      "Remote",
       "Hybrid"
-    ]
-  },
-  {
-    "id": "5",
-    "name": "Atlassian",
-    "website": "atlassian.com",
-    "description": "Team collaboration and productivity software",
-    "year": "2002",
-    "location": "Sydney",
-    "workType": "Remote",
-    "allLocations": [
-      "Sydney",
-      "Melbourne",
-      "San Francisco"
-    ],
-    "allWorkTypes": [
-      "Remote"
     ]
   },
   {
     "id": "6",
-    "name": "SafetyCulture",
-    "website": "safetyculture.com",
-    "description": "Workplace safety and quality management platform",
-    "year": "2004",
-    "location": "Townsville",
-    "workType": "Remote",
-    "allLocations": [
-      "Townsville",
-      "Sydney",
-      "Melbourne"
-    ],
-    "allWorkTypes": [
-      "Remote"
-    ]
-  },
-  {
-    "id": "7",
-    "name": "Campaign Monitor",
-    "website": "campaignmonitor.com",
-    "description": "Email marketing platform for designers",
-    "year": "2004",
-    "location": "Sydney",
-    "workType": "Remote",
-    "allLocations": [
-      "Sydney",
-      "Melbourne"
-    ],
-    "allWorkTypes": [
-      "Remote",
-      "Hybrid"
-    ]
-  },
-  {
-    "id": "8",
-    "name": "Afterpay",
-    "website": "afterpay.com",
-    "description": "Buy now pay later financial services",
-    "year": "2014",
+    "name": "Amber",
+    "website": "amber.com.au",
+    "description": "Renewable energy trading and smart grid optimization platform",
+    "year": "2017",
     "location": "Melbourne",
     "workType": "Hybrid",
     "allLocations": [
       "Melbourne",
-      "Sydney",
-      "Brisbane",
-      "Perth"
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "AMP",
+    "website": "useamp.com",
+    "description": "E-commerce software and platform solutions",
+    "year": "2019",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid",
+      "Remote"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Amplified",
+    "website": "amplified.co",
+    "description": "Attention data & ad analytics",
+    "year": "2017",
+    "location": "Adelaide",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Adelaide",
+      "Sydney"
     ],
     "allWorkTypes": [
       "Hybrid"
@@ -136,32 +128,29 @@
   },
   {
     "id": "9",
-    "name": "Amber Electric",
-    "website": "amberelectric.com.au",
-    "description": "Electricity Retail & Smart Energy",
+    "name": "Askable",
+    "website": "askable.io",
+    "description": "User research and UX testing platform for product teams",
     "year": "2017",
-    "location": "Melbourne",
-    "workType": "Remote",
+    "location": "Brisbane)",
+    "workType": "On-site",
     "allLocations": [
-      "Melbourne",
-      "Sydney"
+      "Brisbane)"
     ],
     "allWorkTypes": [
-      "Remote",
-      "Hybrid",
-      "Onsite"
+      "On-site"
     ]
   },
   {
     "id": "10",
-    "name": "Applied",
-    "website": "beapplied.com",
-    "description": "Skills-based hiring and recruitment assessment platform",
-    "year": "2014",
-    "location": "Perth",
+    "name": "Cake Equity",
+    "website": "cakeequity.com",
+    "description": "Equity Management & Employee Share Plan Platform",
+    "year": "2017",
+    "location": "Brisbane",
     "workType": "Remote",
     "allLocations": [
-      "Perth"
+      "Brisbane"
     ],
     "allWorkTypes": [
       "Remote"
@@ -169,134 +158,123 @@
   },
   {
     "id": "11",
+    "name": "Canva",
+    "website": "canva.com",
+    "description": "Online graphic design and visual content creation platform",
+    "year": "2012",
+    "location": "Sydney",
+    "workType": "Remote",
+    "allLocations": [
+      "Sydney",
+      "Melbourne",
+      "Perth"
+    ],
+    "allWorkTypes": [
+      "Remote",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "12",
     "name": "Castlepoint Systems",
     "website": "castlepoint.systems",
     "description": "Records & Information Governance",
     "year": "2012",
     "location": "Canberra",
-    "workType": "Onsite",
+    "workType": "Hybrid",
     "allLocations": [
       "Canberra"
     ],
     "allWorkTypes": [
-      "Onsite"
-    ]
-  },
-  {
-    "id": "12",
-    "name": "Canva",
-    "website": "canva.com",
-    "description": "Design platform that empowers everyone to design",
-    "year": "2013",
-    "location": "Sydney",
-    "workType": "Remote",
-    "allLocations": [
-      "Sydney",
-      "Melbourne",
-      "Brisbane"
-    ],
-    "allWorkTypes": [
-      "Remote",
       "Hybrid"
     ]
   },
   {
     "id": "13",
-    "name": "Atlassian",
-    "website": "atlassian.com",
-    "description": "Team collaboration and productivity software",
-    "year": "2002",
+    "name": "Constantinople",
+    "website": "cxnpl.com",
+    "description": "Bank infrastructure and operations management software",
+    "year": "2021",
     "location": "Sydney",
-    "workType": "Remote",
+    "workType": "On-site",
     "allLocations": [
-      "Sydney",
-      "Melbourne",
-      "San Francisco"
+      "Sydney"
     ],
     "allWorkTypes": [
-      "Remote"
+      "On-site",
+      "Hybrid"
     ]
   },
   {
     "id": "14",
-    "name": "SafetyCulture",
-    "website": "safetyculture.com",
-    "description": "Workplace safety and quality management platform",
-    "year": "2004",
-    "location": "Townsville",
-    "workType": "Remote",
+    "name": "Culture Amp",
+    "website": "cultureamp.com",
+    "description": "Employee feedback and people analytics platform",
+    "year": "2011",
+    "location": "Melbourne",
+    "workType": "Hybrid",
     "allLocations": [
-      "Townsville",
-      "Sydney",
       "Melbourne"
     ],
     "allWorkTypes": [
-      "Remote"
+      "Hybrid"
     ]
   },
   {
     "id": "15",
-    "name": "Campaign Monitor",
-    "website": "campaignmonitor.com",
-    "description": "Email marketing platform for designers",
-    "year": "2004",
-    "location": "Sydney",
-    "workType": "Remote",
+    "name": "Cuttable",
+    "website": "cuttable.com",
+    "description": "AI-powered video editing and content creation platform",
+    "year": "2021",
+    "location": "Melbourne",
+    "workType": "Hybrid",
     "allLocations": [
-      "Sydney",
       "Melbourne"
     ],
     "allWorkTypes": [
-      "Remote",
       "Hybrid"
     ]
   },
   {
     "id": "16",
-    "name": "Afterpay",
-    "website": "afterpay.com",
-    "description": "Buy now pay later financial services",
-    "year": "2014",
-    "location": "Melbourne",
-    "workType": "Hybrid",
+    "name": "Deputy",
+    "website": "deputy.com",
+    "description": "Employee scheduling and workforce management platform",
+    "year": "2008",
+    "location": "Sydney",
+    "workType": "Remote",
     "allLocations": [
-      "Melbourne",
-      "Sydney",
-      "Brisbane",
-      "Perth"
+      "Sydney"
     ],
     "allWorkTypes": [
-      "Hybrid"
+      "Remote"
     ]
   },
   {
     "id": "17",
-    "name": "Amber Electric",
-    "website": "amberelectric.com.au",
-    "description": "Electricity Retail & Smart Energy",
+    "name": "Dovetail",
+    "website": "dovetail.com",
+    "description": "User research and customer insights platform",
     "year": "2017",
-    "location": "Melbourne",
-    "workType": "Remote",
+    "location": "Sydney",
+    "workType": "On-site",
     "allLocations": [
-      "Melbourne",
       "Sydney"
     ],
     "allWorkTypes": [
-      "Remote",
-      "Hybrid",
-      "Onsite"
+      "On-site"
     ]
   },
   {
     "id": "18",
-    "name": "Applied",
-    "website": "beapplied.com",
-    "description": "Skills-based hiring and recruitment assessment platform",
-    "year": "2014",
-    "location": "Perth",
+    "name": "EatClub",
+    "website": "eatclub.com.au",
+    "description": "Restaurant deals and dining discovery app for consumers",
+    "year": "2012",
+    "location": "Sydney",
     "workType": "Remote",
     "allLocations": [
-      "Perth"
+      "Sydney"
     ],
     "allWorkTypes": [
       "Remote"
@@ -304,81 +282,120 @@
   },
   {
     "id": "19",
-    "name": "Castlepoint Systems",
-    "website": "castlepoint.systems",
-    "description": "Records & Information Governance",
-    "year": "2012",
-    "location": "Canberra",
-    "workType": "Onsite",
-    "allLocations": [
-      "Canberra"
-    ],
-    "allWorkTypes": [
-      "Onsite"
-    ]
-  },
-  {
-    "id": "20",
-    "name": "Canva",
-    "website": "canva.com",
-    "description": "Design platform that empowers everyone to design",
-    "year": "2013",
+    "name": "Employment Hero",
+    "website": "employmenthero.com",
+    "description": "Human resources management and payroll software platform",
+    "year": "2014",
     "location": "Sydney",
     "workType": "Remote",
     "allLocations": [
       "Sydney",
-      "Melbourne",
-      "Brisbane"
+      "Perth"
     ],
     "allWorkTypes": [
-      "Remote",
+      "Remote"
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Eucalyptus",
+    "website": "eucalyptus.health",
+    "description": "Direct-to-consumer digital health and telemedicine platform",
+    "year": "2019",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
       "Hybrid"
     ]
   },
   {
     "id": "21",
-    "name": "Atlassian",
-    "website": "atlassian.com",
-    "description": "Team collaboration and productivity software",
-    "year": "2002",
+    "name": "Fetch",
+    "website": "fetch.com.au",
+    "description": "On-demand pet insurance",
+    "year": "2015",
     "location": "Sydney",
-    "workType": "Remote",
+    "workType": "Hybrid",
     "allLocations": [
-      "Sydney",
-      "Melbourne",
-      "San Francisco"
+      "Sydney"
     ],
     "allWorkTypes": [
-      "Remote"
+      "Hybrid"
     ]
   },
   {
     "id": "22",
-    "name": "SafetyCulture",
-    "website": "safetyculture.com",
-    "description": "Workplace safety and quality management platform",
-    "year": "2004",
-    "location": "Townsville",
-    "workType": "Remote",
+    "name": "Fleet Space Technologies",
+    "website": "fleetspace.com",
+    "description": "Nanosatellite constellation and IoT connectivity solutions",
+    "year": "2015",
+    "location": "Adelaide",
+    "workType": "Hybrid",
     "allLocations": [
-      "Townsville",
-      "Sydney",
-      "Melbourne"
+      "Adelaide"
     ],
     "allWorkTypes": [
+      "Hybrid",
       "Remote"
     ]
   },
   {
     "id": "23",
-    "name": "Campaign Monitor",
-    "website": "campaignmonitor.com",
-    "description": "Email marketing platform for designers",
-    "year": "2004",
+    "name": "Flippa",
+    "website": "flippa.com",
+    "description": "Online marketplace for buying and selling digital businesses",
+    "year": "2009",
+    "location": "Melbourne",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "24",
+    "name": "Go1",
+    "website": "go1.com",
+    "description": "Corporate learning and training content marketplace",
+    "year": "2015",
+    "location": "Brisbane",
+    "workType": "Remote",
+    "allLocations": [
+      "Brisbane"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
+  },
+  {
+    "id": "25",
+    "name": "HarrisonAI",
+    "website": "harrison.ai",
+    "description": "AI-powered medical imaging and diagnostic solutions",
+    "year": "2019",
     "location": "Sydney",
     "workType": "Remote",
     "allLocations": [
-      "Sydney",
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
+  },
+  {
+    "id": "26",
+    "name": "Linktree",
+    "website": "linktr.ee",
+    "description": "Social media link management and bio optimization platform",
+    "year": "2016",
+    "location": "Melbourne",
+    "workType": "Remote",
+    "allLocations": [
       "Melbourne"
     ],
     "allWorkTypes": [
@@ -387,37 +404,63 @@
     ]
   },
   {
-    "id": "24",
-    "name": "Afterpay",
-    "website": "afterpay.com",
-    "description": "Buy now pay later financial services",
-    "year": "2014",
-    "location": "Melbourne",
+    "id": "27",
+    "name": "Lorikeet",
+    "website": "lorikeetcx.ai",
+    "description": "Regulatory compliance and risk management platform",
+    "year": "2021",
+    "location": "Sydney",
+    "workType": "On-site",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "On-site"
+    ]
+  },
+  {
+    "id": "28",
+    "name": "MagicBrief",
+    "website": "magicbrief.com",
+    "description": "Creative advertising and marketing campaign management platform",
+    "year": "2021",
+    "location": "Sydney",
     "workType": "Hybrid",
     "allLocations": [
-      "Melbourne",
-      "Sydney",
-      "Brisbane",
-      "Perth"
+      "Sydney"
     ],
     "allWorkTypes": [
       "Hybrid"
     ]
   },
   {
-    "id": "25",
-    "name": "Simply Wall St",
-    "website": "simplywall.st",
-    "description": "Investment research platform",
-    "year": "2014",
-    "location": "Sydney",
-    "workType": "Remote",
+    "id": "29",
+    "name": "me&u",
+    "website": "meandu.com",
+    "description": "Digital ordering and payment platform for restaurants and hospitality",
+    "year": "2018",
+    "location": "Melbourne",
+    "workType": "Hybrid",
     "allLocations": [
-      "Sydney",
       "Melbourne"
     ],
     "allWorkTypes": [
-      "Remote"
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "30",
+    "name": "Q-CTRL",
+    "website": "q-ctrl.com",
+    "description": "Quantum Infrastructure Software",
+    "year": "2017",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
     ]
   }
 ]

@@ -20,6 +20,11 @@ const generateLogoUrl = (website: string) => {
   return `https://img.logo.dev/${cleanDomain}?token=pk_YiqSJOVUStasZ4yEls7iTw&size=48&retina=true`;
 };
 
+// Helper function to capitalize first letter of work type
+const capitalizeWorkType = (workType: string) => {
+  return workType.charAt(0).toUpperCase() + workType.slice(1).toLowerCase();
+};
+
 export default function CompanyCard({
   name,
   website,
@@ -28,6 +33,7 @@ export default function CompanyCard({
   location,
   workType,
   allLocations,
+  allWorkTypes,
   currentCity,
 }: CompanyCardProps) {
   // Create location display logic
@@ -58,8 +64,24 @@ export default function CompanyCard({
     allLocations && allLocations.length > 1
       ? allLocations.join(", ")
       : location;
+
+  // Create work type display logic
+  const getWorkTypeDisplay = () => {
+    if (!allWorkTypes || allWorkTypes.length <= 1) {
+      return workType;
+    }
+
+    // If multiple work types, show primary + count
+    return `${workType} + ${allWorkTypes.length - 1}`;
+  };
+
+  const workTypeDisplay = getWorkTypeDisplay();
+  const allWorkTypesText =
+    allWorkTypes && allWorkTypes.length > 1
+      ? allWorkTypes.join(", ")
+      : workType;
   return (
-    <div className="bg-white rounded-xl p-6 h-full flex flex-col drop-shadow-[0_0px_8px_rgba(226,216,216,0.8)]">
+    <div className="bg-white rounded-xl p-4 md:p-6 h-full flex flex-col drop-shadow-[0_0px_8px_rgba(226,216,216,0.8)]">
       {/* Company Header */}
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-12 flex items-center justify-center">
@@ -119,10 +141,26 @@ export default function CompanyCard({
             <span>{locationDisplay}</span>
           </div>
         )}
-        <div className="flex items-center gap-1">
-          <Briefcase className="w-4 h-4" />
-          <span>{workType}</span>
-        </div>
+        {allWorkTypes && allWorkTypes.length > 1 ? (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="flex items-center gap-1 cursor-help">
+                  <Briefcase className="w-4 h-4" />
+                  <span>{capitalizeWorkType(workTypeDisplay)}</span>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{allWorkTypesText}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ) : (
+          <div className="flex items-center gap-1">
+            <Briefcase className="w-4 h-4" />
+            <span>{capitalizeWorkType(workType)}</span>
+          </div>
+        )}
       </div>
     </div>
   );

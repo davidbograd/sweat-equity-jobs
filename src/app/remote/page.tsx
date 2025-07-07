@@ -95,17 +95,30 @@ export default function RemotePage() {
 
         {/* Main Content */}
         <main className="max-w-[1462px] mx-auto px-6">
-          <h1 className="text-5xl text-black mb-6">
-            Remote companies offering equity
-          </h1>
+          <div className="pl-4 md:pl-6">
+            <h1 className="text-4xl md:text-5xl text-black mb-4 md:mb-6">
+              Remote companies offering equity
+            </h1>
 
-          <CompaniesStats
-            companiesCount={remoteCompanies.length}
-            citiesCount={citiesCount}
-            workArrangementsCount={workArrangementsCount}
+            <CompaniesStats
+              companiesCount={remoteCompanies.length}
+              citiesCount={citiesCount}
+              workArrangementsCount={workArrangementsCount}
+            />
+          </div>
+
+          <CompaniesGrid
+            companies={remoteCompanies.map((company) => ({
+              ...company,
+              workType: "Remote",
+              allWorkTypes: company.allWorkTypes
+                ? [
+                    "Remote",
+                    ...company.allWorkTypes.filter((type) => type !== "Remote"),
+                  ]
+                : ["Remote"],
+            }))}
           />
-
-          <CompaniesGrid companies={remoteCompanies} />
 
           <CityNavigation currentPage="remote" />
         </main>

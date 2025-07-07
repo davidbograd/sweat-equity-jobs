@@ -22,6 +22,7 @@ export default function CompaniesGrid({
           location={company.location}
           workType={company.workType}
           allLocations={company.allLocations}
+          allWorkTypes={company.allWorkTypes}
           currentCity={currentCity}
         />
       ))}

@@ -10,15 +10,27 @@ export default function CompaniesStats({
   workArrangementsCount,
 }: CompaniesStatsProps) {
   return (
-    <div className="flex flex-wrap gap-8 text-black opacity-65 mb-8 text-2xl">
+    <div className="flex flex-wrap gap-4 md:gap-8 text-black opacity-65 mb-6 md:mb-8 text-lg md:text-2xl">
       <div className="flex items-center gap-2">
-        <span>{companiesCount} companies</span>
+        <span>
+          {companiesCount} {companiesCount === 1 ? "company" : "companies"}
+        </span>
       </div>
       <div className="flex items-center gap-2">
-        <span>{citiesCount} cities</span>
+        <span>
+          {citiesCount} {citiesCount === 1 ? "city" : "cities"}
+        </span>
       </div>
       <div className="flex items-center gap-2">
-        <span>{workArrangementsCount} work arrangements</span>
+        <span>
+          {workArrangementsCount}{" "}
+          <span className="md:hidden">
+            work {workArrangementsCount === 1 ? "type" : "types"}
+          </span>
+          <span className="hidden md:inline">
+            work {workArrangementsCount === 1 ? "arrangement" : "arrangements"}
+          </span>
+        </span>
       </div>
     </div>
   );

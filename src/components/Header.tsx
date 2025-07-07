@@ -8,7 +8,7 @@ export default function Header({ isHomePage = false }: HeaderProps) {
   const content = "🖤 sweat equity jobs";
 
   return (
-    <header className="text-center pt-12 pb-8">
+    <header className="text-center pt-8 md:pt-12 pb-6 md:pb-8">
       {isHomePage ? (
         <div className="text-lg text-black">{content}</div>
       ) : (

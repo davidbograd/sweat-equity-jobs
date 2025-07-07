@@ -33,5 +33,6 @@ export interface CompanyCardProps {
   location: string;
   workType: string;
   allLocations?: string[];
+  allWorkTypes?: string[];
   currentCity?: string;
 }

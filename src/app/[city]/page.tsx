@@ -51,18 +51,6 @@ function filterCompaniesByCity(city: string): Company[] {
   );
 }
 
-// Helper function to get unique cities count
-function getUniqueCitiesCount(filteredCompanies: Company[]): number {
-  const cities = new Set<string>();
-  filteredCompanies.forEach((company) => {
-    cities.add(company.location);
-    if (company.allLocations) {
-      company.allLocations.forEach((loc: string) => cities.add(loc));
-    }
-  });
-  return cities.size;
-}
-
 // Helper function to get unique work arrangements count
 function getUniqueWorkArrangementsCount(filteredCompanies: Company[]): number {
   const workTypes = new Set<string>();
@@ -112,7 +100,7 @@ export default async function CityPage({ params }: CityPageProps) {
   const filteredCompanies = filterCompaniesByCity(city);
 
   // Get stats for filtered companies
-  const citiesCount = getUniqueCitiesCount(filteredCompanies);
+  const citiesCount = 1; // Always show 1 city for city-specific pages
   const workArrangementsCount =
     getUniqueWorkArrangementsCount(filteredCompanies);
 
@@ -135,8 +123,8 @@ export default async function CityPage({ params }: CityPageProps) {
 
         {/* Main Content */}
         <main className="max-w-[1462px] mx-auto px-6">
-          <div className="pl-6">
-            <h1 className="text-5xl text-black mb-6">
+          <div className="pl-4 md:pl-6">
+            <h1 className="text-4xl md:text-5xl text-black mb-4 md:mb-6">
               {capitalizeCityName(city)} companies offering equity
             </h1>
 

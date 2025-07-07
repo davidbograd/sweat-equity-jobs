@@ -76,11 +76,11 @@ export default function Home() {
           </div>
 
           <main className="max-w-[1462px] mx-auto px-6 text-center relative z-10">
-            <h1 className="text-5xl md:text-7xl mb-4 leading-tight">
+            <h1 className="text-3xl md:text-7xl mb-4 leading-tight">
               Find Australian startups that give equity
             </h1>
 
-            <p className="text-2xl text-black mb-10 mx-auto opacity-65">
+            <p className="text-xl text-black mb-8 mx-auto opacity-65">
               A curated list of Aussie startups where equity is part of your
               compensation.
             </p>
@@ -89,14 +89,14 @@ export default function Home() {
             <div className="mb-8">
               <a
                 href="#companies"
-                className="hover:underline hover:underline-offset-8 inline-block text-2xl"
+                className="hover:underline hover:underline-offset-8 inline-block text-xl"
               >
                 See the full list →
               </a>
             </div>
 
             {/* Location Navigation */}
-            <div className="flex flex-wrap justify-center gap-4 mb-16 max-w-2xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4 mb-8 md:mb-16 max-w-2xl mx-auto">
               <Link
                 href="/sydney"
                 className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
@@ -142,7 +142,7 @@ export default function Home() {
             </div>
 
             {/* Video Section */}
-            <div className="flex justify-center mb-20">
+            <div className="flex justify-center mb-6 md:mb-20">
               <a
                 href="https://www.youtube.com/watch?v=JirNXu48Xf0"
                 target="_blank"
@@ -157,7 +157,10 @@ export default function Home() {
                   />
                 </div>
                 <span className="pr-6">
-                  Why you should get a job with equity
+                  <span className="md:hidden">Why get a job with equity</span>
+                  <span className="hidden md:inline">
+                    Why you should get a job with equity
+                  </span>
                 </span>
               </a>
             </div>
@@ -166,10 +169,10 @@ export default function Home() {
         {/* Companies Section */}
         <section
           id="companies"
-          className="text-left max-w-[1462px] mx-auto mt-12 lg:mt-20"
+          className="text-left max-w-[1462px] mx-auto mt-12 lg:mt-20 px-5"
         >
-          <div className="pl-6">
-            <h2 className="text-5xl text-black mb-6">
+          <div className="pl-4 md:pl-6">
+            <h2 className="text-4xl md:text-5xl text-black mb-4 md:mb-6">
               All companies offering equity
             </h2>
 

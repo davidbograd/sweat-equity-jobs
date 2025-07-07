@@ -45,6 +45,25 @@ function parseCSVLine(line) {
   return values;
 }
 
+// Helper function to properly capitalize work types
+function capitalizeWorkType(workType) {
+  const cleaned = workType.trim();
+  
+  // Handle specific cases
+  if (cleaned.toLowerCase() === 'on-site' || cleaned.toLowerCase() === 'onsite') {
+    return 'On-site';
+  }
+  if (cleaned.toLowerCase() === 'remote') {
+    return 'Remote';
+  }
+  if (cleaned.toLowerCase() === 'hybrid') {
+    return 'Hybrid';
+  }
+  
+  // Default: capitalize first letter
+  return cleaned.charAt(0).toUpperCase() + cleaned.slice(1).toLowerCase();
+}
+
 // Function to convert CSV data to sampleCompanies format
 function convertToSampleCompaniesFormat(csvData) {
   return csvData.map((company, index) => {
@@ -53,7 +72,7 @@ function convertToSampleCompaniesFormat(csvData) {
     const primaryLocation = locations[0];
     
     // Handle multiple work arrangements - take the first one for now
-    const workArrangements = company['Work Arrangement'].split(',').map(work => work.trim());
+    const workArrangements = company['Work Arrangement'].split(',').map(work => capitalizeWorkType(work.trim()));
     const primaryWorkType = workArrangements[0];
     
     // Clean up website URL
@@ -66,12 +85,16 @@ function convertToSampleCompaniesFormat(csvData) {
     if (website.startsWith('www.')) {
       website = website.replace('www.', '');
     }
+    // Remove trailing slash
+    if (website.endsWith('/')) {
+      website = website.slice(0, -1);
+    }
     
     return {
       id: (index + 1).toString(),
       name: company.Company,
       website: website,
-      description: company.Oneliner,
+      description: company['1-liner'],
       year: company['Year Founded'],
       location: primaryLocation,
       workType: primaryWorkType,
@@ -82,18 +105,55 @@ function convertToSampleCompaniesFormat(csvData) {
   });
 }
 
+// Function to show usage information
+function showUsage() {
+  console.log('📖 Usage:');
+  console.log('  node csv-to-json.js <input-csv-file> [output-json-file]');
+  console.log('');
+  console.log('📋 Examples:');
+  console.log('  node csv-to-json.js my-companies.csv');
+  console.log('  node csv-to-json.js my-companies.csv output.json');
+  console.log('  node csv-to-json.js ../data/companies.csv companies.json');
+  console.log('');
+  console.log('ℹ️  If no output file is specified, it will default to "companies.json"');
+}
+
 // Main conversion function
 function convertCSVToJSON() {
-  const csvPath = path.join(__dirname, '../data/placeholder-content.csv');
-  const jsonPath = path.join(__dirname, '../src/data/companies.json');
+  // Get command line arguments
+  const args = process.argv.slice(2);
+  
+  // Check if input file is provided
+  if (args.length === 0) {
+    console.error('❌ Error: No input CSV file specified');
+    console.log('');
+    showUsage();
+    return;
+  }
+  
+  const inputFile = args[0];
+  const outputFile = args[1] || 'companies.json';
+  
+  // Build file paths
+  const csvPath = path.resolve(__dirname, inputFile);
+  const jsonPath = path.resolve(__dirname, outputFile);
   
   try {
     // Check if CSV file exists
     if (!fs.existsSync(csvPath)) {
-      console.error(`CSV file not found: ${csvPath}`);
-      console.log('Please make sure the CSV file exists at: data/placeholder-content.csv');
+      console.error(`❌ CSV file not found: ${csvPath}`);
+      console.log('');
+      console.log('💡 Tips:');
+      console.log('  - Make sure the file path is correct');
+      console.log('  - Use relative paths from the src/data/ directory');
+      console.log('  - Check the file extension (.csv)');
       return;
     }
+    
+    console.log('🚀 Starting CSV to JSON conversion...');
+    console.log(`📂 Input:  ${csvPath}`);
+    console.log(`📂 Output: ${jsonPath}`);
+    console.log('');
     
     // Read CSV file
     const csvContent = fs.readFileSync(csvPath, 'utf8');
@@ -101,21 +161,18 @@ function convertCSVToJSON() {
     // Parse CSV to raw data
     const csvData = parseCSV(csvContent);
     
+    if (csvData.length === 0) {
+      console.error('❌ No data found in CSV file');
+      return;
+    }
+    
     // Convert to sampleCompanies format
     const companies = convertToSampleCompaniesFormat(csvData);
-    
-    // Create src/data directory if it doesn't exist
-    const srcDataDir = path.join(__dirname, '../src/data');
-    if (!fs.existsSync(srcDataDir)) {
-      fs.mkdirSync(srcDataDir, { recursive: true });
-    }
     
     // Write JSON file
     fs.writeFileSync(jsonPath, JSON.stringify(companies, null, 2));
     
     console.log(`✅ Successfully converted CSV to JSON!`);
-    console.log(`📁 Input: ${csvPath}`);
-    console.log(`📁 Output: ${jsonPath}`);
     console.log(`📊 Converted ${companies.length} companies`);
     
     // Preview first few companies
@@ -138,6 +195,11 @@ function convertCSVToJSON() {
     
   } catch (error) {
     console.error('❌ Error converting CSV to JSON:', error.message);
+    console.log('');
+    console.log('💡 Common issues:');
+    console.log('  - CSV file is not properly formatted');
+    console.log('  - Missing required columns (Company, Location, Work Arrangement, etc.)');
+    console.log('  - File encoding issues');
   }
 }
 
