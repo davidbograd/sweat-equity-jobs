@@ -2,6 +2,7 @@ import Link from "next/link";
 import CompaniesStats from "../components/CompaniesStats";
 import CompaniesGrid from "../components/CompaniesGrid";
 import Header from "../components/Header";
+import FAQ from "../components/FAQ";
 import companies from "../data/companies.json";
 import {
   generateWebsiteSchema,
@@ -185,6 +186,9 @@ export default function Home() {
 
           <CompaniesGrid companies={companies} />
         </section>
+
+        {/* FAQ Section */}
+        <FAQ />
       </div>
     </>
   );

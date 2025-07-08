@@ -16,6 +16,22 @@
   },
   {
     "id": "2",
+    "name": "90 Seconds",
+    "website": "90seconds.com",
+    "description": "Global video production marketplace and content creation platform",
+    "year": "2010",
+    "location": "Sydney",
+    "workType": "Remote",
+    "allLocations": [
+      "Sydney",
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
+  },
+  {
+    "id": "3",
     "name": "Accelo",
     "website": "accelo.com",
     "description": "Project management and client work management platform for service businesses",
@@ -30,7 +46,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": "4",
     "name": "Advanced Navigation",
     "website": "advancednavigation.com.au",
     "description": "Global leader in navigation and autonomous systems.",
@@ -47,7 +63,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": "5",
     "name": "AgriDigital",
     "website": "agridigital.io",
     "description": "Digital commodity management and supply chain platform for agriculture",
@@ -63,7 +79,22 @@
     ]
   },
   {
-    "id": "5",
+    "id": "6",
+    "name": "AirShr",
+    "website": "airshr.com",
+    "description": "Audio content sharing and podcast discovery platform",
+    "year": "2016",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "7",
     "name": "Airwallex",
     "website": "airwallex.com",
     "description": "Global payments and financial infrastructure for businesses",
@@ -79,7 +110,25 @@
     ]
   },
   {
-    "id": "6",
+    "id": "8",
+    "name": "AmazingCo",
+    "website": "amazingco.me/aus",
+    "description": "Experiences & leisure activities platform",
+    "year": "2016",
+    "location": "Melbourne",
+    "workType": "On-site",
+    "allLocations": [
+      "Melbourne",
+      "Perth",
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "On-site",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "9",
     "name": "Amber",
     "website": "amber.com.au",
     "description": "Renewable energy trading and smart grid optimization platform",
@@ -95,7 +144,7 @@
     ]
   },
   {
-    "id": "7",
+    "id": "10",
     "name": "AMP",
     "website": "useamp.com",
     "description": "E-commerce software and platform solutions",
@@ -111,7 +160,7 @@
     ]
   },
   {
-    "id": "8",
+    "id": "11",
     "name": "Amplified",
     "website": "amplified.co",
     "description": "Attention data & ad analytics",
@@ -127,22 +176,255 @@
     ]
   },
   {
-    "id": "9",
-    "name": "Askable",
-    "website": "askable.io",
-    "description": "User research and UX testing platform for product teams",
+    "id": "12",
+    "name": "Anduril",
+    "website": "anduril.com",
+    "description": "Advanced defense technology and autonomous systems",
     "year": "2017",
-    "location": "Brisbane)",
+    "location": "Sydney",
     "workType": "On-site",
     "allLocations": [
-      "Brisbane)"
+      "Sydney",
+      "Melbourne"
     ],
     "allWorkTypes": [
       "On-site"
     ]
   },
   {
-    "id": "10",
+    "id": "13",
+    "name": "Aquila",
+    "website": "aquila.space",
+    "description": "Optical energy products, enabling long-range, wireless power connections, making clean energy more accessible and accelerating electrification.",
+    "year": "2022",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Archistar.ai",
+    "website": "archistar.ai",
+    "description": "AI-powered property development and architectural design platform",
+    "year": "2010",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Arinex",
+    "website": "arinex.com.au",
+    "description": "Professional conference and event management services",
+    "year": "1973",
+    "location": "Sydney",
+    "workType": "On-site",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "On-site",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Arkeus",
+    "website": "arkeus.com",
+    "description": "AI-powered Optical Autonomy",
+    "year": "2020",
+    "location": "Melbourne",
+    "workType": "On-site",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "On-site"
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Arlula",
+    "website": "arlula.com",
+    "description": "Satellite Imagery Access & Management",
+    "year": "2018",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Askable",
+    "website": "askable.io",
+    "description": "User research and UX testing platform for product teams",
+    "year": "2017",
+    "location": "Brisbane",
+    "workType": "On-site",
+    "allLocations": [
+      "Brisbane"
+    ],
+    "allWorkTypes": [
+      "On-site"
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Atelier",
+    "website": "atelier.co",
+    "description": "Cloud manufacturing marketplace for beauty/wellness",
+    "year": "2018",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Athena Home Loans",
+    "website": "athena.com.au",
+    "description": "Digital home loan and mortgage platform",
+    "year": "2017",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney",
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Hybrid",
+      "Remote"
+    ]
+  },
+  {
+    "id": "21",
+    "name": "Avarni",
+    "website": "avarni.co",
+    "description": "AI-Powered Carbon Accounting & Emissions Reduction",
+    "year": "2021",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "22",
+    "name": "Baraja",
+    "website": "baraja.com",
+    "description": "LiDAR for Autonomous Vehicles",
+    "year": "2015",
+    "location": "Sydney",
+    "workType": "On-site",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "On-site"
+    ]
+  },
+  {
+    "id": "23",
+    "name": "Biza.io",
+    "website": "biza.io",
+    "description": "Consumer Data Right compliance and open banking platform",
+    "year": "2017",
+    "location": "Brisbane",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Brisbane"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "24",
+    "name": "Black.ai",
+    "website": "black.ai",
+    "description": "AI-powered retail business intelligence and data analytics platform",
+    "year": "2017",
+    "location": "Melbourne",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "25",
+    "name": "Blinq",
+    "website": "blinq.me",
+    "description": "Digital business card and professional networking platform",
+    "year": "2017",
+    "location": "Melbourne",
+    "workType": "On-site",
+    "allLocations": [
+      "Melbourne",
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "On-site",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "26",
+    "name": "Block",
+    "website": "block.xyz",
+    "description": "Tools for economic empowerment and financial innovation",
+    "year": "2009",
+    "location": "Melbourne",
+    "workType": "Remote",
+    "allLocations": [
+      "Melbourne",
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Remote",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "27",
+    "name": "Build Kite",
+    "website": "buildkite.com",
+    "description": "Software delivery solutions",
+    "year": "2013",
+    "location": "Melbourne",
+    "workType": "Remote",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
+  },
+  {
+    "id": "28",
     "name": "Cake Equity",
     "website": "cakeequity.com",
     "description": "Equity Management & Employee Share Plan Platform",
@@ -157,7 +439,22 @@
     ]
   },
   {
-    "id": "11",
+    "id": "29",
+    "name": "Calven",
+    "website": "calven.com",
+    "description": "Workspace booking and management platform",
+    "year": "2020",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "30",
     "name": "Canva",
     "website": "canva.com",
     "description": "Online graphic design and visual content creation platform",
@@ -175,7 +472,37 @@
     ]
   },
   {
-    "id": "12",
+    "id": "31",
+    "name": "Carted",
+    "website": "carted.com",
+    "description": "Universal Commerce API – Shopping Lists & Affiliate Purchase API",
+    "year": "2020",
+    "location": "Sydney",
+    "workType": "Remote",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
+  },
+  {
+    "id": "32",
+    "name": "Cascade",
+    "website": "cascade.app",
+    "description": "Strategy execution and performance management platform",
+    "year": "2016",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "33",
     "name": "Castlepoint Systems",
     "website": "castlepoint.systems",
     "description": "Records & Information Governance",
@@ -190,7 +517,53 @@
     ]
   },
   {
-    "id": "13",
+    "id": "34",
+    "name": "Chemist2U",
+    "website": "chemist2u.com.au",
+    "description": "Online pharmacy with prescription delivery and telehealth services",
+    "year": "2010",
+    "location": "Sydney",
+    "workType": "On-site",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "On-site"
+    ]
+  },
+  {
+    "id": "35",
+    "name": "Coassemble",
+    "website": "coassemble.com",
+    "description": "Online course authoring and learning management platform",
+    "year": "2014",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid",
+      "Remote"
+    ]
+  },
+  {
+    "id": "36",
+    "name": "CoinJar",
+    "website": "coinjar.com",
+    "description": "Digital currency exchange and Bitcoin wallet platform",
+    "year": "2013",
+    "location": "Melbourne",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "37",
     "name": "Constantinople",
     "website": "cxnpl.com",
     "description": "Bank infrastructure and operations management software",
@@ -206,7 +579,38 @@
     ]
   },
   {
-    "id": "14",
+    "id": "38",
+    "name": "Cortical Labs",
+    "website": "corticallabs.com",
+    "description": "Biological intelligence and synthetic biological computing",
+    "year": "2019",
+    "location": "Melbourne",
+    "workType": "On-site",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "On-site"
+    ]
+  },
+  {
+    "id": "39",
+    "name": "Coviu",
+    "website": "coviu.com",
+    "description": "Telehealth Video Consultation",
+    "year": "2015",
+    "location": "Melbourne",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Melbourne",
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "40",
     "name": "Culture Amp",
     "website": "cultureamp.com",
     "description": "Employee feedback and people analytics platform",
@@ -221,7 +625,7 @@
     ]
   },
   {
-    "id": "15",
+    "id": "41",
     "name": "Cuttable",
     "website": "cuttable.com",
     "description": "AI-powered video editing and content creation platform",
@@ -236,7 +640,39 @@
     ]
   },
   {
-    "id": "16",
+    "id": "42",
+    "name": "Cydarm",
+    "website": "cydarm.com",
+    "description": "Cyber threat intelligence and security monitoring platform",
+    "year": "2018",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney",
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "43",
+    "name": "D-Matrix",
+    "website": "d-matrix.ai",
+    "description": "Making Generative AI Commercially Viable",
+    "year": "2019",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid",
+      "Remote"
+    ]
+  },
+  {
+    "id": "44",
     "name": "Deputy",
     "website": "deputy.com",
     "description": "Employee scheduling and workforce management platform",
@@ -251,7 +687,7 @@
     ]
   },
   {
-    "id": "17",
+    "id": "45",
     "name": "Dovetail",
     "website": "dovetail.com",
     "description": "User research and customer insights platform",
@@ -266,7 +702,7 @@
     ]
   },
   {
-    "id": "18",
+    "id": "46",
     "name": "EatClub",
     "website": "eatclub.com.au",
     "description": "Restaurant deals and dining discovery app for consumers",
@@ -281,7 +717,7 @@
     ]
   },
   {
-    "id": "19",
+    "id": "47",
     "name": "Employment Hero",
     "website": "employmenthero.com",
     "description": "Human resources management and payroll software platform",
@@ -297,7 +733,7 @@
     ]
   },
   {
-    "id": "20",
+    "id": "48",
     "name": "Eucalyptus",
     "website": "eucalyptus.health",
     "description": "Direct-to-consumer digital health and telemedicine platform",
@@ -312,7 +748,7 @@
     ]
   },
   {
-    "id": "21",
+    "id": "49",
     "name": "Fetch",
     "website": "fetch.com.au",
     "description": "On-demand pet insurance",
@@ -327,7 +763,38 @@
     ]
   },
   {
-    "id": "22",
+    "id": "50",
+    "name": "Fivecast",
+    "website": "fivecast.com",
+    "description": "Threat Detection via OSINT",
+    "year": "2019",
+    "location": "Adelaide",
+    "workType": "On-site",
+    "allLocations": [
+      "Adelaide",
+      "Canberra"
+    ],
+    "allWorkTypes": [
+      "On-site"
+    ]
+  },
+  {
+    "id": "51",
+    "name": "FL0",
+    "website": "fl0.com",
+    "description": "Cloud infrastructure and deployment platform for developers",
+    "year": "2022",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "52",
     "name": "Fleet Space Technologies",
     "website": "fleetspace.com",
     "description": "Nanosatellite constellation and IoT connectivity solutions",
@@ -343,7 +810,7 @@
     ]
   },
   {
-    "id": "23",
+    "id": "53",
     "name": "Flippa",
     "website": "flippa.com",
     "description": "Online marketplace for buying and selling digital businesses",
@@ -358,7 +825,23 @@
     ]
   },
   {
-    "id": "24",
+    "id": "54",
+    "name": "FrankieOne",
+    "website": "frankieone.com",
+    "description": "Digital identity verification and compliance platform",
+    "year": "2018",
+    "location": "Melbourne",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Melbourne",
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "55",
     "name": "Go1",
     "website": "go1.com",
     "description": "Corporate learning and training content marketplace",
@@ -373,7 +856,7 @@
     ]
   },
   {
-    "id": "25",
+    "id": "56",
     "name": "HarrisonAI",
     "website": "harrison.ai",
     "description": "AI-powered medical imaging and diagnostic solutions",
@@ -388,7 +871,119 @@
     ]
   },
   {
-    "id": "26",
+    "id": "57",
+    "name": "Heaps Normal",
+    "website": "heapsnormal.com",
+    "description": "Non-alcoholic craft beer",
+    "year": "2018",
+    "location": "Sydney",
+    "workType": "On-site",
+    "allLocations": [
+      "Sydney",
+      "Canberra",
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "On-site"
+    ]
+  },
+  {
+    "id": "58",
+    "name": "Heidi Health",
+    "website": "heidihealth.com",
+    "description": "AI-powered medical documentation and clinical workflow automation",
+    "year": "2022",
+    "location": "Melbourne",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Melbourne",
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "59",
+    "name": "HotDoc",
+    "website": "hotdoc.com.au",
+    "description": "Patient booking and healthcare practice management software",
+    "year": "2012",
+    "location": "Melbourne",
+    "workType": "Remote",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Remote",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "60",
+    "name": "Immutable",
+    "website": "immutable.com",
+    "description": "Blockchain infrastructure for NFTs and Web3 gaming",
+    "year": "2018",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "61",
+    "name": "InDebted",
+    "website": "indebted.com",
+    "description": "Digital debt collection and recovery platform",
+    "year": "2017",
+    "location": "Brisbane",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Brisbane",
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "62",
+    "name": "Kinde",
+    "website": "kinde.com",
+    "description": "Authentication and user management platform for developers",
+    "year": "2022",
+    "location": "Sydney",
+    "workType": "Remote",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Remote",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "63",
+    "name": "Leonardo AI",
+    "website": "leonardo.ai",
+    "description": "AI-powered image generation and creative content platform",
+    "year": "2022",
+    "location": "Sydney",
+    "workType": "Remote",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Remote",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "64",
     "name": "Linktree",
     "website": "linktr.ee",
     "description": "Social media link management and bio optimization platform",
@@ -404,7 +999,7 @@
     ]
   },
   {
-    "id": "27",
+    "id": "65",
     "name": "Lorikeet",
     "website": "lorikeetcx.ai",
     "description": "Regulatory compliance and risk management platform",
@@ -419,7 +1014,7 @@
     ]
   },
   {
-    "id": "28",
+    "id": "66",
     "name": "MagicBrief",
     "website": "magicbrief.com",
     "description": "Creative advertising and marketing campaign management platform",
@@ -434,7 +1029,7 @@
     ]
   },
   {
-    "id": "29",
+    "id": "67",
     "name": "me&u",
     "website": "meandu.com",
     "description": "Digital ordering and payment platform for restaurants and hospitality",
@@ -449,7 +1044,37 @@
     ]
   },
   {
-    "id": "30",
+    "id": "68",
+    "name": "Ortto",
+    "website": "ortto.com",
+    "description": "Customer journey orchestration and marketing automation platform",
+    "year": "2015",
+    "location": "Sydney",
+    "workType": "Remote",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
+  },
+  {
+    "id": "69",
+    "name": "Pearler",
+    "website": "pearler.com",
+    "description": "Automated investing & superannuation platform",
+    "year": "2020",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "70",
     "name": "Q-CTRL",
     "website": "q-ctrl.com",
     "description": "Quantum Infrastructure Software",
@@ -461,6 +1086,131 @@
     ],
     "allWorkTypes": [
       "Hybrid"
+    ]
+  },
+  {
+    "id": "71",
+    "name": "Redbubble",
+    "website": "redbubble.com",
+    "description": "Print-on-demand marketplace for independent artists",
+    "year": "2006",
+    "location": "Melbourne",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "72",
+    "name": "SafetyCulture",
+    "website": "safetyculture.com",
+    "description": "Workplace safety management and inspection software platform",
+    "year": "2004",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney",
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "73",
+    "name": "Secure Code Warrior",
+    "website": "securecodewarrior.com",
+    "description": "Developer security training and secure coding education platform",
+    "year": "2015",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "74",
+    "name": "Spaceship",
+    "website": "spaceship.com.au",
+    "description": "Digital superannuation and investment platform for young Australians",
+    "year": "2017",
+    "location": "Sydney",
+    "workType": "Hybrid",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "75",
+    "name": "Kite Aero",
+    "website": "kite.aero",
+    "description": "Drone Delivery Networks",
+    "year": "2017",
+    "location": "Melbourne",
+    "workType": "On-site",
+    "allLocations": [
+      "Melbourne",
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "On-site"
+    ]
+  },
+  {
+    "id": "76",
+    "name": "ULUU",
+    "website": "uluu.com.au",
+    "description": "Seaweed-Based Bioplastics",
+    "year": "2020",
+    "location": "Perth",
+    "workType": "On-site",
+    "allLocations": [
+      "Perth",
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "On-site",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "77",
+    "name": "UpGuard",
+    "website": "upguard.com",
+    "description": "Cyber risk assessment and security monitoring platform",
+    "year": "2011",
+    "location": "Sydney",
+    "workType": "Remote",
+    "allLocations": [
+      "Sydney",
+      "Hobart"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
+  },
+  {
+    "id": "78",
+    "name": "XYLO",
+    "website": "xylo.bio",
+    "description": "Neurotherapeutics to rewire neural circuits and restore brain function",
+    "year": "2017",
+    "location": "Sydney",
+    "workType": "On-site",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "On-site"
     ]
   }
 ]

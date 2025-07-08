@@ -1,3 +1,7 @@
+// Instructions: To use this script, run the following command:
+//    node src/data/csv-to-json.js csv-to-use/[filename-here].csv
+// Eg node src/data/csv-to-json.js csv-to-use/export-20250707.csv
+
 /* eslint-disable @typescript-eslint/no-require-imports */
 const fs = require('fs');
 const path = require('path');
