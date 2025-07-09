@@ -21,6 +21,33 @@ export async function generateMetadata({
   return {
     title: `${capitalizedCity} companies offering equity - Sweat Equity Jobs`,
     description: `Find Australian startups in ${capitalizedCity} that offer equity as part of your compensation package.`,
+    metadataBase: new URL("https://equityjobs.com.au"),
+    openGraph: {
+      title: `${capitalizedCity} companies offering equity - Sweat Equity Jobs`,
+      description: `Find Australian startups in ${capitalizedCity} that offer equity as part of your compensation package.`,
+      url: `https://equityjobs.com.au/${city.toLowerCase()}`,
+      siteName: "Sweat Equity Jobs",
+      images: [
+        {
+          url: "/images/open-graph-equity.png",
+          width: 1200,
+          height: 630,
+          alt: `${capitalizedCity} companies offering equity - Sweat Equity Jobs`,
+        },
+      ],
+      locale: "en_AU",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${capitalizedCity} companies offering equity - Sweat Equity Jobs`,
+      description: `Find Australian startups in ${capitalizedCity} that offer equity as part of your compensation package.`,
+      images: ["/images/open-graph-equity.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
@@ -72,10 +99,10 @@ function generateCityStructuredData(
   const capitalizedCity = capitalizeCityName(city);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://sweatequityjobs.com" },
+    { name: "Home", url: "https://equityjobs.com.au" },
     {
       name: `${capitalizedCity} Companies`,
-      url: `https://sweatequityjobs.com/${city.toLowerCase()}`,
+      url: `https://equityjobs.com.au/${city.toLowerCase()}`,
     },
   ]);
 

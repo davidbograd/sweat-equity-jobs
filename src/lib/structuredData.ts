@@ -58,12 +58,12 @@ export function generateWebsiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Sweat Equity Jobs",
-    url: "https://sweatequityjobs.com",
+    url: "https://equityjobs.com.au",
     description:
       "Find Australian startups that give equity as part of your compensation package",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://sweatequityjobs.com/search?q={search_term_string}",
+      target: "https://equityjobs.com.au/search?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };

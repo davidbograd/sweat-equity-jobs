@@ -15,6 +15,35 @@ export const metadata: Metadata = {
   title: "Remote companies offering equity - Sweat Equity Jobs",
   description:
     "Find Australian startups that offer remote work and equity as part of your compensation package.",
+  metadataBase: new URL("https://equityjobs.com.au"),
+  openGraph: {
+    title: "Remote companies offering equity - Sweat Equity Jobs",
+    description:
+      "Find Australian startups that offer remote work and equity as part of your compensation package.",
+    url: "https://equityjobs.com.au/remote",
+    siteName: "Sweat Equity Jobs",
+    images: [
+      {
+        url: "/images/open-graph-equity.png",
+        width: 1200,
+        height: 630,
+        alt: "Remote companies offering equity - Sweat Equity Jobs",
+      },
+    ],
+    locale: "en_AU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Remote companies offering equity - Sweat Equity Jobs",
+    description:
+      "Find Australian startups that offer remote work and equity as part of your compensation package.",
+    images: ["/images/open-graph-equity.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 // Helper function to filter companies that offer remote work
@@ -55,8 +84,8 @@ function getUniqueWorkArrangementsCount(filteredCompanies: Company[]): number {
 // Generate structured data for remote page
 function generateRemoteStructuredData(filteredCompanies: Company[]) {
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://sweatequityjobs.com" },
-    { name: "Remote Companies", url: "https://sweatequityjobs.com/remote" },
+    { name: "Home", url: "https://equityjobs.com.au" },
+    { name: "Remote Companies", url: "https://equityjobs.com.au/remote" },
   ]);
 
   const itemListSchema = generateItemListSchema(
