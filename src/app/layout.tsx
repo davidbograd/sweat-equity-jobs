@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "../components/Footer";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 export const metadata: Metadata = {
   title: "Find Australian companies giving startup equity - Sweat Equity Jobs",
@@ -54,7 +55,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased font-satoshi">
-        {children}
+        <ErrorBoundary>{children}</ErrorBoundary>
         <Footer />
       </body>
     </html>

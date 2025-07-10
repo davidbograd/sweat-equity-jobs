@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import CompaniesStats from "../components/CompaniesStats";
 import CompaniesGrid from "../components/CompaniesGrid";
 import Header from "../components/Header";
 import FAQ from "../components/FAQ";
+import CTAButton from "../components/CTAButton";
 import companies from "../data/companies.json";
 import {
   generateWebsiteSchema,
@@ -86,14 +88,11 @@ export default function Home() {
               compensation.
             </p>
 
-            {/* CTA Link */}
+            {/* CTA Button */}
             <div className="mb-8">
-              <a
-                href="#companies"
-                className="hover:underline hover:underline-offset-8 inline-block text-xl"
-              >
+              <CTAButton className="hover:underline hover:underline-offset-8 inline-block text-xl bg-transparent border-none cursor-pointer text-black">
                 See the full list →
-              </a>
+              </CTAButton>
             </div>
 
             {/* Location Navigation */}
@@ -151,10 +150,13 @@ export default function Home() {
                 className="inline-flex items-center gap-3 text-black bg-white rounded-2xl transition-colors"
               >
                 <div className="p-2">
-                  <img
+                  <Image
                     src="/images/video-thumbnail@2x.png"
-                    alt="Video thumbnail"
+                    alt="Video thumbnail showing why you should get a job with equity"
+                    width={64}
+                    height={40}
                     className="w-16 h-10 rounded-lg"
+                    priority={false}
                   />
                 </div>
                 <span className="pr-6">
