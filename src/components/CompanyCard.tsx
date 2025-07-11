@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { CalendarHeart, MapPin, Briefcase } from "lucide-react";
 import {
   Tooltip,
@@ -85,9 +86,11 @@ export default function CompanyCard({
       {/* Company Header */}
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-12 flex items-center justify-center">
-          <img
+          <Image
             src={generateLogoUrl(website)}
             alt={`${name} logo`}
+            width={48}
+            height={48}
             className="w-12 h-12 object-contain rounded-lg"
             onError={(e) => {
               // Fallback to orange bar if logo fails to load
