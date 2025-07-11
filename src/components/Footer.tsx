@@ -23,16 +23,16 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-gray-700 hover:underline hover:underline-offset-4"
             >
-              Anthony Stahl
+              Anthony Stahl{" "}
             </Link>
             and{" "}
             <Link
-              href="https://www.linkedin.com/in/anthony-stahl-4941637a/"
+              href="https://x.com/DavidBograd"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-700 hover:underline hover:underline-offset-4"
             >
-              Anthony Stahl
+              David Bograd
             </Link>
           </div>
         </div>
