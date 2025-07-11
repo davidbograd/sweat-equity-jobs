@@ -18,13 +18,13 @@ export default function Footer() {
           <div>
             Made by{" "}
             <Link
-              href="https://x.com/DavidBograd"
+              href="https://www.linkedin.com/in/anthony-stahl-4941637a/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-700 hover:underline hover:underline-offset-4"
             >
-              David Bograd
-            </Link>{" "}
+              Anthony Stahl
+            </Link>
             and{" "}
             <Link
               href="https://www.linkedin.com/in/anthony-stahl-4941637a/"
@@ -34,7 +34,6 @@ export default function Footer() {
             >
               Anthony Stahl
             </Link>
-            .
           </div>
         </div>
       </div>
