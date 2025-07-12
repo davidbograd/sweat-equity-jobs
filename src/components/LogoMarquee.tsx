@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { Company } from "../lib/types";
 
 interface LogoMarqueeProps {
