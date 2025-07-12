@@ -11,24 +11,24 @@ import {
 } from "../../lib/structuredData";
 import type { Company } from "../../lib/types";
 
-// Metadata for the remote page
+// Metadata for the other cities page
 export const metadata: Metadata = {
-  title: "Remote companies offering equity - Sweat Equity Jobs",
+  title: "Other cities companies offering equity - Sweat Equity Jobs",
   description:
-    "Find Australian startups that offer remote work and equity as part of your compensation package.",
+    "Find Australian startups in other cities that offer equity as part of your compensation package.",
   metadataBase: new URL("https://equityjobs.com.au"),
   openGraph: {
-    title: "Remote companies offering equity - Sweat Equity Jobs",
+    title: "Other cities companies offering equity - Sweat Equity Jobs",
     description:
-      "Find Australian startups that offer remote work and equity as part of your compensation package.",
-    url: "https://equityjobs.com.au/remote",
+      "Find Australian startups in other cities that offer equity as part of your compensation package.",
+    url: "https://equityjobs.com.au/other",
     siteName: "Sweat Equity Jobs",
     images: [
       {
         url: "/images/open-graph-equity.png",
         width: 1200,
         height: 630,
-        alt: "Remote companies offering equity - Sweat Equity Jobs",
+        alt: "Other cities companies offering equity - Sweat Equity Jobs",
       },
     ],
     locale: "en_AU",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Remote companies offering equity - Sweat Equity Jobs",
+    title: "Other cities companies offering equity - Sweat Equity Jobs",
     description:
-      "Find Australian startups that offer remote work and equity as part of your compensation package.",
+      "Find Australian startups in other cities that offer equity as part of your compensation package.",
     images: ["/images/open-graph-equity.png"],
   },
   robots: {
@@ -47,17 +47,37 @@ export const metadata: Metadata = {
   },
 };
 
-// Helper function to filter companies that offer remote work
-function filterRemoteCompanies(): Company[] {
-  return (companies as Company[]).filter(
-    (company) =>
-      company.workType.toLowerCase() === "remote" ||
-      (company.allWorkTypes &&
-        company.allWorkTypes.some((type) => type.toLowerCase() === "remote"))
-  );
+// Define the major cities to exclude
+const majorCities = [
+  "sydney",
+  "melbourne",
+  "brisbane",
+  "perth",
+  "adelaide",
+  "canberra",
+];
+
+// Helper function to filter companies that are NOT in major cities
+function filterOtherCitiesCompanies(): Company[] {
+  return (companies as Company[]).filter((company) => {
+    // Check if company's primary location is not in major cities
+    const isPrimaryLocationMajor = majorCities.includes(
+      company.location.toLowerCase()
+    );
+
+    // Check if any of the company's locations are in major cities
+    const hasAnyMajorLocation = company.allLocations
+      ? company.allLocations.some((loc) =>
+          majorCities.includes(loc.toLowerCase())
+        )
+      : false;
+
+    // Include company if it's not primarily in a major city and doesn't have any major city locations
+    return !isPrimaryLocationMajor && !hasAnyMajorLocation;
+  });
 }
 
-// Helper function to get unique cities count for remote companies
+// Helper function to get unique cities count for other cities companies
 function getUniqueCitiesCount(filteredCompanies: Company[]): number {
   const cities = new Set<string>();
   filteredCompanies.forEach((company) => {
@@ -69,7 +89,7 @@ function getUniqueCitiesCount(filteredCompanies: Company[]): number {
   return cities.size;
 }
 
-// Helper function to get unique work arrangements count for remote companies
+// Helper function to get unique work arrangements count for other cities companies
 function getUniqueWorkArrangementsCount(filteredCompanies: Company[]): number {
   const workTypes = new Set<string>();
   filteredCompanies.forEach((company) => {
@@ -82,32 +102,34 @@ function getUniqueWorkArrangementsCount(filteredCompanies: Company[]): number {
   return workTypes.size;
 }
 
-// Generate structured data for remote page
-function generateRemoteStructuredData(filteredCompanies: Company[]) {
+// Generate structured data for other cities page
+function generateOtherCitiesStructuredData(filteredCompanies: Company[]) {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "https://equityjobs.com.au" },
-    { name: "Remote Companies", url: "https://equityjobs.com.au/remote" },
+    { name: "Other Cities Companies", url: "https://equityjobs.com.au/other" },
   ]);
 
   const itemListSchema = generateItemListSchema(
     filteredCompanies,
-    "Remote Companies Offering Equity",
-    "Australian startups offering remote work and equity compensation"
+    "Other Cities Companies Offering Equity",
+    "Australian startups in other cities offering equity compensation"
   );
 
   return [breadcrumbSchema, itemListSchema];
 }
 
-export default function RemotePage() {
-  // Filter companies for remote work
-  const remoteCompanies = filterRemoteCompanies();
+export default function OtherCitiesPage() {
+  // Filter companies for other cities
+  const otherCitiesCompanies = filterOtherCitiesCompanies();
 
-  // Get stats for remote companies
-  const citiesCount = getUniqueCitiesCount(remoteCompanies);
-  const workArrangementsCount = getUniqueWorkArrangementsCount(remoteCompanies);
+  // Get stats for other cities companies
+  const citiesCount = getUniqueCitiesCount(otherCitiesCompanies);
+  const workArrangementsCount =
+    getUniqueWorkArrangementsCount(otherCitiesCompanies);
 
   // Generate structured data
-  const structuredData = generateRemoteStructuredData(remoteCompanies);
+  const structuredData =
+    generateOtherCitiesStructuredData(otherCitiesCompanies);
 
   return (
     <>
@@ -127,12 +149,12 @@ export default function RemotePage() {
         <main className="max-w-[1462px] mx-auto px-6">
           <div className="pl-4 md:pl-6">
             <h1 className="text-4xl md:text-5xl text-black mb-4 md:mb-6">
-              Remote companies offering equity
+              Other cities companies offering equity
             </h1>
 
             <div className="flex flex-col md:flex-row md:items-baseline md:justify-between md:gap-4 mb-6">
               <CompaniesStats
-                companiesCount={remoteCompanies.length}
+                companiesCount={otherCitiesCompanies.length}
                 citiesCount={citiesCount}
                 workArrangementsCount={workArrangementsCount}
               />
@@ -158,20 +180,9 @@ export default function RemotePage() {
             </Link>
           </div>
 
-          <CompaniesGrid
-            companies={remoteCompanies.map((company) => ({
-              ...company,
-              workType: "Remote",
-              allWorkTypes: company.allWorkTypes
-                ? [
-                    "Remote",
-                    ...company.allWorkTypes.filter((type) => type !== "Remote"),
-                  ]
-                : ["Remote"],
-            }))}
-          />
+          <CompaniesGrid companies={otherCitiesCompanies} />
 
-          <CityNavigation currentPage="remote" />
+          <CityNavigation currentPage="other" />
         </main>
       </div>
     </>

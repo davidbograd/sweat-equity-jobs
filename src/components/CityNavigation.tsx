@@ -2,7 +2,7 @@ import Link from "next/link";
 
 interface CityNavigationProps {
   currentCity?: string;
-  currentPage?: "remote" | "city";
+  currentPage?: "remote" | "city" | "other";
 }
 
 export default function CityNavigation({
@@ -26,11 +26,16 @@ export default function CityNavigation({
     : cities;
 
   const showRemoteLink = currentPage !== "remote";
+  const showOtherLink = currentPage !== "other";
 
   return (
     <div className="mt-16 pt-8 border-t border-gray-200">
       <h3 className="text-2xl text-black mb-6">
-        {currentPage === "remote" ? "Browse by city" : "Other locations"}
+        {currentPage === "remote"
+          ? "Browse by city"
+          : currentPage === "other"
+          ? "Browse by location"
+          : "Other locations"}
       </h3>
       <div className="flex flex-wrap gap-4 max-w-2xl mb-4">
         <Link
@@ -47,6 +52,14 @@ export default function CityNavigation({
             className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
           >
             Remote companies →
+          </Link>
+        )}
+        {showOtherLink && (
+          <Link
+            href="/other"
+            className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+          >
+            Other cities companies →
           </Link>
         )}
         {filteredCities.map((city) => (

@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import type { Metadata } from "next";
 import CompaniesStats from "../../components/CompaniesStats";
 import CompaniesGrid from "../../components/CompaniesGrid";
@@ -155,11 +156,32 @@ export default async function CityPage({ params }: CityPageProps) {
               {capitalizeCityName(city)} companies offering equity
             </h1>
 
-            <CompaniesStats
-              companiesCount={filteredCompanies.length}
-              citiesCount={citiesCount}
-              workArrangementsCount={workArrangementsCount}
-            />
+            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between md:gap-4 mb-6">
+              <CompaniesStats
+                companiesCount={filteredCompanies.length}
+                citiesCount={citiesCount}
+                workArrangementsCount={workArrangementsCount}
+              />
+
+              <Link
+                href="https://tally.so/r/wzBdPa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center text-lg text-black opacity-65 hover:opacity-100 hover:underline hover:underline-offset-4 transition-opacity whitespace-nowrap"
+              >
+                Submit another company
+              </Link>
+            </div>
+
+            {/* Mobile link - shows below CompaniesStats */}
+            <Link
+              href="https://tally.so/r/wzBdPa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:hidden inline-flex items-center text-lg text-black opacity-65 hover:opacity-100 hover:underline hover:underline-offset-4 transition-opacity mb-6"
+            >
+              Submit another company
+            </Link>
           </div>
 
           <CompaniesGrid companies={filteredCompanies} currentCity={city} />

@@ -5,6 +5,7 @@ import CompaniesGrid from "../components/CompaniesGrid";
 import Header from "../components/Header";
 import FAQ from "../components/FAQ";
 import CTAButton from "../components/CTAButton";
+import LogoMarquee from "../components/LogoMarquee";
 import companies from "../data/companies.json";
 import {
   generateWebsiteSchema,
@@ -134,6 +135,12 @@ export default function Home() {
                 Canberra companies →
               </Link>
               <Link
+                href="/other"
+                className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+              >
+                Other cities companies →
+              </Link>
+              <Link
                 href="/remote"
                 className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
               >
@@ -169,16 +176,27 @@ export default function Home() {
             </div>
           </main>
         </div>
+
+        {/* Logo Marquee - Full Width */}
+        <div className="w-full mb-12 md:mb-20">
+          <LogoMarquee companies={companies} />
+        </div>
         {/* Companies Section */}
         <section
           id="companies"
           className="text-left max-w-[1462px] mx-auto mt-12 lg:mt-20 px-5"
         >
           <div className="pl-4 md:pl-6">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-4 mb-4 md:mb-6">
-              <h2 className="text-4xl md:text-5xl text-black mb-4 md:mb-0">
-                All companies offering equity
-              </h2>
+            <h2 className="text-4xl md:text-5xl text-black mb-4 md:mb-6">
+              All companies offering equity
+            </h2>
+
+            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between md:gap-4 mb-6">
+              <CompaniesStats
+                companiesCount={companies.length}
+                citiesCount={6}
+                workArrangementsCount={3}
+              />
 
               <Link
                 href="https://tally.so/r/wzBdPa"
@@ -186,15 +204,9 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="hidden md:inline-flex items-center text-lg text-black opacity-65 hover:opacity-100 hover:underline hover:underline-offset-4 transition-opacity whitespace-nowrap"
               >
-                Submit another company →
+                Submit another company
               </Link>
             </div>
-
-            <CompaniesStats
-              companiesCount={companies.length}
-              citiesCount={6}
-              workArrangementsCount={3}
-            />
 
             {/* Mobile link - shows below CompaniesStats */}
             <Link
@@ -203,7 +215,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="md:hidden inline-flex items-center text-lg text-black opacity-65 hover:opacity-100 hover:underline hover:underline-offset-4 transition-opacity mb-6"
             >
-              Submit another company →
+              Submit another company
             </Link>
           </div>
 
