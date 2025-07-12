@@ -175,15 +175,36 @@ export default function Home() {
           className="text-left max-w-[1462px] mx-auto mt-12 lg:mt-20 px-5"
         >
           <div className="pl-4 md:pl-6">
-            <h2 className="text-4xl md:text-5xl text-black mb-4 md:mb-6">
-              All companies offering equity
-            </h2>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-4 mb-4 md:mb-6">
+              <h2 className="text-4xl md:text-5xl text-black mb-4 md:mb-0">
+                All companies offering equity
+              </h2>
+
+              <Link
+                href="https://tally.so/r/wzBdPa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center text-lg text-black opacity-65 hover:opacity-100 hover:underline hover:underline-offset-4 transition-opacity whitespace-nowrap"
+              >
+                Submit another company →
+              </Link>
+            </div>
 
             <CompaniesStats
               companiesCount={companies.length}
               citiesCount={6}
               workArrangementsCount={3}
             />
+
+            {/* Mobile link - shows below CompaniesStats */}
+            <Link
+              href="https://tally.so/r/wzBdPa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:hidden inline-flex items-center text-lg text-black opacity-65 hover:opacity-100 hover:underline hover:underline-offset-4 transition-opacity mb-6"
+            >
+              Submit another company →
+            </Link>
           </div>
 
           <CompaniesGrid companies={companies} />

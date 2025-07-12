@@ -53,6 +53,22 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap"
           rel="stylesheet"
         />
+
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-3MD2PEZ0BW"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-3MD2PEZ0BW');
+            `,
+          }}
+        />
       </head>
       <body className="antialiased font-satoshi">
         <ErrorBoundary>{children}</ErrorBoundary>
