@@ -18,7 +18,13 @@ const generateLogoUrl = (website: string) => {
     .replace(/^www\./, "") // Remove www
     .replace(/\/$/, ""); // Remove trailing slash
 
-  return `https://img.logo.dev/${cleanDomain}?token=pk_YiqSJOVUStasZ4yEls7iTw&size=48&retina=true`;
+  const apiKey = process.env.NEXT_PUBLIC_LOGO_DEV_API_KEY;
+  if (!apiKey) {
+    console.warn("NEXT_PUBLIC_LOGO_DEV_API_KEY is not set");
+    return ""; // Return empty string to trigger the onError fallback (orange bar)
+  }
+
+  return `https://img.logo.dev/${cleanDomain}?token=${apiKey}&size=48&retina=true`;
 };
 
 // Helper function to capitalize first letter of work type
@@ -92,6 +98,7 @@ export default function CompanyCard({
             width={48}
             height={48}
             className="w-12 h-12 object-contain rounded-lg"
+            unoptimized={true}
             onError={(e) => {
               // Fallback to orange bar if logo fails to load
               e.currentTarget.style.display = "none";
