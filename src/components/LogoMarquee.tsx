@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo } from "react";
+import { useMemo, useEffect, useState } from "react";
 import type { Company } from "../lib/types";
 
 interface LogoMarqueeProps {
@@ -33,12 +33,21 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 };
 
 export default function LogoMarquee({ companies }: LogoMarqueeProps) {
-  // Generate random logos for both rows
-  const { topRowLogos, bottomRowLogos } = useMemo(() => {
+  const [shuffledLogos, setShuffledLogos] = useState<{
+    topRowLogos: Company[];
+    bottomRowLogos: Company[];
+  }>({
+    topRowLogos: companies.slice(0, 20),
+    bottomRowLogos: companies.slice(20, 40),
+  });
+
+  // Shuffle logos on client side only to prevent hydration mismatch
+  useEffect(() => {
     const shuffledCompanies = shuffleArray(companies);
-    const topRowLogos = shuffledCompanies.slice(0, 12);
-    const bottomRowLogos = shuffledCompanies.slice(12, 24);
-    return { topRowLogos, bottomRowLogos };
+    setShuffledLogos({
+      topRowLogos: shuffledCompanies.slice(0, 20),
+      bottomRowLogos: shuffledCompanies.slice(20, 40),
+    });
   }, [companies]);
 
   return (
@@ -46,52 +55,56 @@ export default function LogoMarquee({ companies }: LogoMarqueeProps) {
       {/* Top row - moves right */}
       <div className="flex whitespace-nowrap mb-4">
         <div className="flex animate-marquee-right">
-          {[...topRowLogos, ...topRowLogos, ...topRowLogos].map(
-            (company, index) => (
-              <div
-                key={`top-${index}`}
-                className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center"
-              >
-                <Image
-                  src={generateLogoUrl(company.website)}
-                  alt={`${company.name} logo`}
-                  width={60}
-                  height={60}
-                  className="w-12 h-12 object-contain rounded-lg"
-                  unoptimized={true}
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none";
-                  }}
-                />
-              </div>
-            )
-          )}
+          {[
+            ...shuffledLogos.topRowLogos,
+            ...shuffledLogos.topRowLogos,
+            ...shuffledLogos.topRowLogos,
+          ].map((company, index) => (
+            <div
+              key={`top-${index}`}
+              className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center"
+            >
+              <Image
+                src={generateLogoUrl(company.website)}
+                alt={`${company.name} logo`}
+                width={60}
+                height={60}
+                className="w-12 h-12 object-contain rounded-lg"
+                unoptimized={true}
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Bottom row - moves left */}
       <div className="flex whitespace-nowrap">
         <div className="flex animate-marquee-left">
-          {[...bottomRowLogos, ...bottomRowLogos, ...bottomRowLogos].map(
-            (company, index) => (
-              <div
-                key={`bottom-${index}`}
-                className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center"
-              >
-                <Image
-                  src={generateLogoUrl(company.website)}
-                  alt={`${company.name} logo`}
-                  width={60}
-                  height={60}
-                  className="w-12 h-12 object-contain rounded-lg"
-                  unoptimized={true}
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none";
-                  }}
-                />
-              </div>
-            )
-          )}
+          {[
+            ...shuffledLogos.bottomRowLogos,
+            ...shuffledLogos.bottomRowLogos,
+            ...shuffledLogos.bottomRowLogos,
+          ].map((company, index) => (
+            <div
+              key={`bottom-${index}`}
+              className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center"
+            >
+              <Image
+                src={generateLogoUrl(company.website)}
+                alt={`${company.name} logo`}
+                width={60}
+                height={60}
+                className="w-12 h-12 object-contain rounded-lg"
+                unoptimized={true}
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>
