@@ -25,27 +25,27 @@ const shuffleArray = <T,>(array: T[]): T[] => {
   return shuffled;
 };
 
+// Companies to always include in the marquee (add website URLs here)
+const whitelistedCompanies: string[] = [
+  "eucalyptus.health",
+  "canva.com",
+  "deputy.com",
+  "linktr.ee",
+];
+
+// Companies to exclude from the marquee (add website URLs here)
+const excludedCompanies: string[] = [
+  "airshr.com",
+  "black.ai",
+  "cxnpl.com",
+  "dataweavers.com",
+  "gomarloo.com",
+  "sherlok.com.au",
+  "vexev.com",
+  "inventia.life",
+];
+
 export default function LogoMarquee({ companies }: LogoMarqueeProps) {
-  // Companies to always include in the marquee (add website URLs here)
-  const whitelistedCompanies: string[] = [
-    "eucalyptus.health",
-    "canva.com",
-    "deputy.com",
-    "linktr.ee",
-  ];
-
-  // Companies to exclude from the marquee (add website URLs here)
-  const excludedCompanies: string[] = [
-    "airshr.com",
-    "black.ai",
-    "cxnpl.com",
-    "dataweavers.com",
-    "gomarloo.com",
-    "sherlok.com.au",
-    "vexev.com",
-    "inventia.life",
-  ];
-
   const [shuffledLogos, setShuffledLogos] = useState<{
     topRowLogos: Company[];
     bottomRowLogos: Company[];
