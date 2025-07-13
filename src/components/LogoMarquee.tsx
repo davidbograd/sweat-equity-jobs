@@ -63,6 +63,7 @@ export default function LogoMarquee({ companies }: LogoMarqueeProps) {
                 width={60}
                 height={60}
                 className="w-12 h-12 object-contain rounded-lg"
+                unoptimized={true}
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
                 }}
@@ -90,6 +91,7 @@ export default function LogoMarquee({ companies }: LogoMarqueeProps) {
                 width={60}
                 height={60}
                 className="w-12 h-12 object-contain rounded-lg"
+                unoptimized={true}
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
                 }}

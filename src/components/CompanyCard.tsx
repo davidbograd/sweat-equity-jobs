@@ -89,6 +89,7 @@ export default function CompanyCard({
             width={48}
             height={48}
             className="w-12 h-12 object-contain rounded-lg"
+            unoptimized={true}
             onError={(e) => {
               // Fallback to orange bar if logo fails to load
               e.currentTarget.style.display = "none";
