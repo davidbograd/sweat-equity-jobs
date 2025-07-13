@@ -26,6 +26,17 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 };
 
 export default function LogoMarquee({ companies }: LogoMarqueeProps) {
+  // Companies to exclude from the marquee (add website URLs here)
+  const excludedCompanies: string[] = [
+    "airshr.com",
+    "black.ai",
+    "cxnpl.com",
+    "dataweavers.com",
+    "gomarloo.com",
+    "sherlok.com.au",
+    "vexev.com",
+  ];
+
   const [shuffledLogos, setShuffledLogos] = useState<{
     topRowLogos: Company[];
     bottomRowLogos: Company[];
@@ -36,7 +47,12 @@ export default function LogoMarquee({ companies }: LogoMarqueeProps) {
 
   // Shuffle logos on client side only to prevent hydration mismatch
   useEffect(() => {
-    const shuffledCompanies = shuffleArray(companies);
+    // Filter out excluded companies before shuffling
+    const filteredCompanies = companies.filter(
+      (company) => !excludedCompanies.includes(company.website)
+    );
+
+    const shuffledCompanies = shuffleArray(filteredCompanies);
     setShuffledLogos({
       topRowLogos: shuffledCompanies.slice(0, 20),
       bottomRowLogos: shuffledCompanies.slice(20, 40),
