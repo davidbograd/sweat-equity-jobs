@@ -3,23 +3,16 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import type { Company } from "../lib/types";
+import logoMapping from "../data/logo-mapping.json";
 
 interface LogoMarqueeProps {
   companies: Company[];
 }
 
-const generateLogoUrl = (website: string) => {
-  const cleanDomain = website
-    .replace(/^https?:\/\//, "")
-    .replace(/^www\./, "")
-    .replace(/\/$/, "");
-
-  const apiKey = process.env.NEXT_PUBLIC_LOGO_DEV_API_KEY;
-  if (!apiKey) {
-    return "";
-  }
-
-  return `https://img.logo.dev/${cleanDomain}?token=${apiKey}&size=60&retina=true`;
+const getLogoPath = (website: string): string => {
+  // Use the static logo mapping, fallback to a placeholder if not found
+  const logoPath = logoMapping[website as keyof typeof logoMapping];
+  return logoPath || "/logos/placeholder.svg";
 };
 
 // Helper function to shuffle array
@@ -65,12 +58,11 @@ export default function LogoMarquee({ companies }: LogoMarqueeProps) {
               className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center"
             >
               <Image
-                src={generateLogoUrl(company.website)}
+                src={getLogoPath(company.website)}
                 alt={`${company.name} logo`}
                 width={60}
                 height={60}
                 className="w-12 h-12 object-contain rounded-lg"
-                unoptimized={true}
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
                 }}
@@ -93,12 +85,11 @@ export default function LogoMarquee({ companies }: LogoMarqueeProps) {
               className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center"
             >
               <Image
-                src={generateLogoUrl(company.website)}
+                src={getLogoPath(company.website)}
                 alt={`${company.name} logo`}
                 width={60}
                 height={60}
                 className="w-12 h-12 object-contain rounded-lg"
-                unoptimized={true}
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
                 }}

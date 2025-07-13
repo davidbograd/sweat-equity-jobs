@@ -4,15 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run fetch-logos && next build",
     "start": "next start",
     "lint": "next lint",
-    "convert-csv": "node scripts/csv-to-json.js"
+    "convert-csv": "node scripts/csv-to-json.js",
+    "fetch-logos": "node scripts/fetch-logos.js"
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.2.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^17.2.0",
     "lucide-react": "^0.525.0",
     "next": "15.3.5",
     "react": "^19.0.0",

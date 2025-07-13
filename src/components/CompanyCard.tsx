@@ -9,22 +9,13 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import type { CompanyCardProps } from "../lib/types";
+import logoMapping from "../data/logo-mapping.json";
 
-// Helper function to generate logo.dev URL
-const generateLogoUrl = (website: string) => {
-  // Clean the website URL to get just the domain
-  const cleanDomain = website
-    .replace(/^https?:\/\//, "") // Remove protocol
-    .replace(/^www\./, "") // Remove www
-    .replace(/\/$/, ""); // Remove trailing slash
-
-  const apiKey = process.env.NEXT_PUBLIC_LOGO_DEV_API_KEY;
-  if (!apiKey) {
-    console.warn("NEXT_PUBLIC_LOGO_DEV_API_KEY is not set");
-    return ""; // Return empty string to trigger the onError fallback (orange bar)
-  }
-
-  return `https://img.logo.dev/${cleanDomain}?token=${apiKey}&size=48&retina=true`;
+// Helper function to get logo path from static mapping
+const getLogoPath = (website: string): string => {
+  // Use the static logo mapping, fallback to a placeholder if not found
+  const logoPath = logoMapping[website as keyof typeof logoMapping];
+  return logoPath || "/logos/placeholder.svg";
 };
 
 // Helper function to capitalize first letter of work type
@@ -93,12 +84,11 @@ export default function CompanyCard({
       <div className="flex items-center gap-3 mb-4">
         <div className="w-12 h-12 flex items-center justify-center">
           <Image
-            src={generateLogoUrl(website)}
+            src={getLogoPath(website)}
             alt={`${name} logo`}
             width={48}
             height={48}
             className="w-12 h-12 object-contain rounded-lg"
-            unoptimized={true}
             onError={(e) => {
               // Fallback to orange bar if logo fails to load
               e.currentTarget.style.display = "none";
