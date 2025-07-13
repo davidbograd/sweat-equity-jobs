@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Footer from "../components/Footer";
 import ErrorBoundary from "../components/ErrorBoundary";
@@ -53,24 +54,22 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap"
           rel="stylesheet"
         />
-
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-3MD2PEZ0BW"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-3MD2PEZ0BW');
-            `,
-          }}
-        />
       </head>
       <body className="antialiased font-satoshi">
+        {/* Google Analytics - Using Next.js Script component */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-3MD2PEZ0BW"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3MD2PEZ0BW');
+          `}
+        </Script>
+
         <ErrorBoundary>{children}</ErrorBoundary>
         <Footer />
       </body>
