@@ -99,108 +99,86 @@ export default function LogoMarquee({ companies }: LogoMarqueeProps) {
     setIsLoaded(true);
   }, [companies]);
 
-  // Show skeleton loading state until logos are shuffled
-  if (!isLoaded) {
-    return (
-      <div className="w-full overflow-hidden select-none pointer-events-none relative">
-        {/* Top row skeleton */}
-        <div className="flex whitespace-nowrap mb-4">
-          <div className="flex animate-marquee-right">
-            {Array.from({ length: 60 }).map((_, index) => (
-              <div
-                key={`skeleton-top-${index}`}
-                className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center"
-              >
-                <div className="w-12 h-12 bg-gray-200 rounded-lg animate-pulse" />
-              </div>
-            ))}
-          </div>
-        </div>
+  // Simple logo renderer with skeleton background
+  const renderLogo = (company: Company, key: string) => (
+    <div
+      key={key}
+      className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center relative"
+    >
+      {/* Always show skeleton - provides consistent height */}
+      <div className="w-12 h-12 bg-gray-200 rounded-lg animate-pulse absolute" />
+      <Image
+        src={getLogoPath(company.website)}
+        alt={`${company.name} logo`}
+        width={60}
+        height={60}
+        className="w-12 h-12 object-contain rounded-lg relative z-10 opacity-0 transition-opacity duration-500 ease-in-out"
+        unoptimized={true}
+        onLoad={(e) => {
+          // Simple fade in - no skeleton manipulation
+          e.currentTarget.style.opacity = "1";
+        }}
+        onError={(e) => {
+          // Hide failed images, keep skeleton visible
+          e.currentTarget.style.display = "none";
+        }}
+      />
+    </div>
+  );
 
-        {/* Bottom row skeleton */}
-        <div className="flex whitespace-nowrap">
-          <div className="flex animate-marquee-left">
-            {Array.from({ length: 60 }).map((_, index) => (
-              <div
-                key={`skeleton-bottom-${index}`}
-                className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center"
-              >
-                <div className="w-12 h-12 bg-gray-200 rounded-lg animate-pulse" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
+  // Render skeleton placeholders while loading
+  const renderSkeletonPlaceholder = (key: string) => (
+    <div
+      key={key}
+      className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center"
+    >
+      <div className="w-12 h-12 bg-gray-200 rounded-lg animate-pulse" />
+    </div>
+  );
 
   return (
     <div className="w-full overflow-hidden select-none pointer-events-none relative">
       {/* Top row - moves right */}
       <div className="flex whitespace-nowrap mb-4">
         <div className="flex animate-marquee-right">
-          {[
-            ...shuffledLogos.topRowLogos,
-            ...shuffledLogos.topRowLogos,
-            ...shuffledLogos.topRowLogos,
-          ].map((company, index) => (
-            <div
-              key={`top-${index}`}
-              className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center relative"
-            >
-              <div className="w-12 h-12 bg-gray-200 rounded-lg animate-pulse absolute" />
-              <Image
-                src={getLogoPath(company.website)}
-                alt={`${company.name} logo`}
-                width={60}
-                height={60}
-                className="w-12 h-12 object-contain rounded-lg relative z-10 opacity-0 transition-opacity duration-1500 ease-in-out"
-                unoptimized={true}
-                onLoad={(e) => {
-                  // Fade in image on top of skeleton
-                  e.currentTarget.style.opacity = "1";
-                }}
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                  // Keep skeleton visible if image fails
-                }}
-              />
-            </div>
-          ))}
+          {isLoaded ? (
+            <>
+              {/* Create continuous loop with 2 copies */}
+              {shuffledLogos.topRowLogos.map((company, index) =>
+                renderLogo(company, `top-${index}`)
+              )}
+              {shuffledLogos.topRowLogos.map((company, index) =>
+                renderLogo(company, `top-dup-${index}`)
+              )}
+            </>
+          ) : (
+            /* Show skeleton placeholders to prevent layout shift */
+            Array.from({ length: 40 }).map((_, index) =>
+              renderSkeletonPlaceholder(`skeleton-top-${index}`)
+            )
+          )}
         </div>
       </div>
 
       {/* Bottom row - moves left */}
       <div className="flex whitespace-nowrap">
         <div className="flex animate-marquee-left">
-          {[
-            ...shuffledLogos.bottomRowLogos,
-            ...shuffledLogos.bottomRowLogos,
-            ...shuffledLogos.bottomRowLogos,
-          ].map((company, index) => (
-            <div
-              key={`bottom-${index}`}
-              className="flex-shrink-0 mx-4 w-16 h-16 flex items-center justify-center relative"
-            >
-              <div className="w-12 h-12 bg-gray-200 rounded-lg animate-pulse absolute" />
-              <Image
-                src={getLogoPath(company.website)}
-                alt={`${company.name} logo`}
-                width={60}
-                height={60}
-                className="w-12 h-12 object-contain rounded-lg relative z-10 opacity-0 transition-opacity duration-1500 ease-in-out"
-                unoptimized={true}
-                onLoad={(e) => {
-                  // Fade in image on top of skeleton
-                  e.currentTarget.style.opacity = "1";
-                }}
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                  // Keep skeleton visible if image fails
-                }}
-              />
-            </div>
-          ))}
+          {isLoaded ? (
+            <>
+              {/* Create continuous loop with 2 copies */}
+              {shuffledLogos.bottomRowLogos.map((company, index) =>
+                renderLogo(company, `bottom-${index}`)
+              )}
+              {shuffledLogos.bottomRowLogos.map((company, index) =>
+                renderLogo(company, `bottom-dup-${index}`)
+              )}
+            </>
+          ) : (
+            /* Show skeleton placeholders to prevent layout shift */
+            Array.from({ length: 40 }).map((_, index) =>
+              renderSkeletonPlaceholder(`skeleton-bottom-${index}`)
+            )
+          )}
         </div>
       </div>
     </div>
