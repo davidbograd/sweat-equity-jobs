@@ -221,22 +221,7 @@
       "Hybrid"
     ]
   },
-  {
-    "id": "15",
-    "name": "Arinex",
-    "website": "arinex.com.au",
-    "description": "Professional conference and event management services",
-    "year": "1973",
-    "location": "Sydney",
-    "workType": "On-site",
-    "allLocations": [
-      "Sydney"
-    ],
-    "allWorkTypes": [
-      "On-site",
-      "Hybrid"
-    ]
-  },
+
   {
     "id": "16",
     "name": "Arkeus",

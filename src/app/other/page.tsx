@@ -180,7 +180,10 @@ export default function OtherCitiesPage() {
             </Link>
           </div>
 
-          <CompaniesGrid companies={otherCitiesCompanies} />
+          <CompaniesGrid
+            companies={otherCitiesCompanies}
+            expandedByDefault={true}
+          />
 
           <CityNavigation currentPage="other" />
         </main>

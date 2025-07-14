@@ -169,6 +169,7 @@ export default function RemotePage() {
                   ]
                 : ["Remote"],
             }))}
+            expandedByDefault={true}
           />
 
           <CityNavigation currentPage="remote" />

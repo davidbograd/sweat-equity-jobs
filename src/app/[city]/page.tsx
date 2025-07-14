@@ -184,7 +184,11 @@ export default async function CityPage({ params }: CityPageProps) {
             </Link>
           </div>
 
-          <CompaniesGrid companies={filteredCompanies} currentCity={city} />
+          <CompaniesGrid
+            companies={filteredCompanies}
+            currentCity={city}
+            expandedByDefault={true}
+          />
 
           <CityNavigation currentCity={city} currentPage="city" />
         </main>
