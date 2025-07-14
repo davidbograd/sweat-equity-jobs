@@ -40,7 +40,7 @@ export default function Home() {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <div className="relative w-full pb-16">
+        <div className="relative w-full pb-8">
           {/* Background gradients */}
           <div className="absolute inset-0 pointer-events-none">
             {/* Left gradient */}
@@ -97,59 +97,59 @@ export default function Home() {
             </div>
 
             {/* Location Navigation */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8 md:mb-16 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 md:mb-16 justify-center justify-items-start mx-auto w-fit">
               <Link
                 href="/sydney"
                 className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
               >
-                Sydney companies →
+                Sydney →
               </Link>
               <Link
                 href="/melbourne"
                 className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
               >
-                Melbourne companies →
+                Melbourne →
               </Link>
               <Link
                 href="/brisbane"
                 className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
               >
-                Brisbane companies →
+                Brisbane →
               </Link>
               <Link
                 href="/perth"
                 className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
               >
-                Perth companies →
+                Perth →
               </Link>
               <Link
                 href="/adelaide"
                 className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
               >
-                Adelaide companies →
+                Adelaide →
               </Link>
               <Link
                 href="/canberra"
                 className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
               >
-                Canberra companies →
+                Canberra →
               </Link>
               <Link
                 href="/other"
                 className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
               >
-                Other cities companies →
+                Other cities →
               </Link>
               <Link
                 href="/remote"
                 className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
               >
-                Remote companies →
+                Remote →
               </Link>
             </div>
 
             {/* Video Section */}
-            <div className="flex justify-center mb-6 md:mb-20">
+            <div className="flex justify-center mb-6 md:mb-12">
               <a
                 href="https://www.youtube.com/watch?v=JirNXu48Xf0"
                 target="_blank"
