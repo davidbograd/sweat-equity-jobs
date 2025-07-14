@@ -130,7 +130,7 @@ body {
 /* Marquee animations */
 @keyframes marquee-right {
   0% {
-    transform: translateX(-33.33%);
+    transform: translateX(-50%);
   }
   100% {
     transform: translateX(0%);
@@ -142,7 +142,7 @@ body {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-33.33%);
+    transform: translateX(-50%);
   }
 }
 
