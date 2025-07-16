@@ -221,9 +221,8 @@
       "Hybrid"
     ]
   },
-
   {
-    "id": "16",
+    "id": "15",
     "name": "Arkeus",
     "website": "arkeus.com",
     "description": "AI-powered Optical Autonomy",
@@ -238,7 +237,7 @@
     ]
   },
   {
-    "id": "17",
+    "id": "16",
     "name": "Arlula",
     "website": "arlula.com",
     "description": "Satellite Imagery Access & Management",
@@ -253,7 +252,7 @@
     ]
   },
   {
-    "id": "18",
+    "id": "17",
     "name": "Askable",
     "website": "askable.io",
     "description": "User research and UX testing platform for product teams",
@@ -268,7 +267,7 @@
     ]
   },
   {
-    "id": "19",
+    "id": "18",
     "name": "Atelier",
     "website": "atelier.co",
     "description": "Cloud manufacturing marketplace for beauty/wellness",
@@ -283,7 +282,7 @@
     ]
   },
   {
-    "id": "20",
+    "id": "19",
     "name": "Athena Home Loans",
     "website": "athena.com.au",
     "description": "Digital home loan and mortgage platform",
@@ -300,7 +299,7 @@
     ]
   },
   {
-    "id": "21",
+    "id": "20",
     "name": "Avarni",
     "website": "avarni.co",
     "description": "AI-Powered Carbon Accounting & Emissions Reduction",
@@ -315,7 +314,7 @@
     ]
   },
   {
-    "id": "22",
+    "id": "21",
     "name": "Baraja",
     "website": "baraja.com",
     "description": "LiDAR for Autonomous Vehicles",
@@ -330,7 +329,7 @@
     ]
   },
   {
-    "id": "23",
+    "id": "22",
     "name": "Biza.io",
     "website": "biza.io",
     "description": "Consumer Data Right compliance and open banking platform",
@@ -345,7 +344,7 @@
     ]
   },
   {
-    "id": "24",
+    "id": "23",
     "name": "Black.ai",
     "website": "black.ai",
     "description": "AI-powered retail business intelligence and data analytics platform",
@@ -360,7 +359,7 @@
     ]
   },
   {
-    "id": "25",
+    "id": "24",
     "name": "Blinq",
     "website": "blinq.me",
     "description": "Digital business card and professional networking platform",
@@ -377,7 +376,7 @@
     ]
   },
   {
-    "id": "26",
+    "id": "25",
     "name": "Block",
     "website": "block.xyz",
     "description": "Tools for economic empowerment and financial innovation",
@@ -394,7 +393,7 @@
     ]
   },
   {
-    "id": "27",
+    "id": "26",
     "name": "Bookipi",
     "website": "bookipi.com",
     "description": "Invoicing, Payroll & Accounting for Freelancers & SMEs",
@@ -409,7 +408,7 @@
     ]
   },
   {
-    "id": "28",
+    "id": "27",
     "name": "Brandcrush",
     "website": "brandcrush.com",
     "description": "Influencer Marketing & Brand Collaboration Platform",
@@ -424,7 +423,7 @@
     ]
   },
   {
-    "id": "29",
+    "id": "28",
     "name": "Breaker",
     "website": "breakerindustries.com",
     "description": "Multi-Agent AI Control Systems for robots",
@@ -439,7 +438,7 @@
     ]
   },
   {
-    "id": "30",
+    "id": "29",
     "name": "Brighte",
     "website": "brighte.com.au",
     "description": "Clean energy financing and solar loan solutions",
@@ -454,7 +453,7 @@
     ]
   },
   {
-    "id": "31",
+    "id": "30",
     "name": "Buildkite",
     "website": "buildkite.com",
     "description": "Software delivery solutions",
@@ -469,7 +468,7 @@
     ]
   },
   {
-    "id": "32",
+    "id": "31",
     "name": "Cake Equity",
     "website": "cakeequity.com",
     "description": "Equity Management & Employee Share Plan Platform",
@@ -484,7 +483,7 @@
     ]
   },
   {
-    "id": "33",
+    "id": "32",
     "name": "Calven",
     "website": "calven.com",
     "description": "Workspace booking and management platform",
@@ -499,7 +498,7 @@
     ]
   },
   {
-    "id": "34",
+    "id": "33",
     "name": "Canva",
     "website": "canva.com",
     "description": "Online graphic design and visual content creation platform",
@@ -517,7 +516,7 @@
     ]
   },
   {
-    "id": "35",
+    "id": "34",
     "name": "Carted",
     "website": "carted.com",
     "description": "Universal Commerce API – Shopping Lists & Affiliate Purchase API",
@@ -532,7 +531,7 @@
     ]
   },
   {
-    "id": "36",
+    "id": "35",
     "name": "Cascade",
     "website": "cascade.app",
     "description": "Strategy execution and performance management platform",
@@ -547,7 +546,7 @@
     ]
   },
   {
-    "id": "37",
+    "id": "36",
     "name": "Castlepoint Systems",
     "website": "castlepoint.systems",
     "description": "Records & Information Governance",
@@ -562,7 +561,7 @@
     ]
   },
   {
-    "id": "38",
+    "id": "37",
     "name": "Chemist2U",
     "website": "chemist2u.com.au",
     "description": "Online pharmacy with prescription delivery and telehealth services",
@@ -577,7 +576,7 @@
     ]
   },
   {
-    "id": "39",
+    "id": "38",
     "name": "Coassemble",
     "website": "coassemble.com",
     "description": "Online course authoring and learning management platform",
@@ -593,7 +592,7 @@
     ]
   },
   {
-    "id": "40",
+    "id": "39",
     "name": "CoinJar",
     "website": "coinjar.com",
     "description": "Digital currency exchange and Bitcoin wallet platform",
@@ -608,7 +607,7 @@
     ]
   },
   {
-    "id": "41",
+    "id": "40",
     "name": "Constantinople",
     "website": "cxnpl.com",
     "description": "Bank infrastructure and operations management software",
@@ -624,7 +623,7 @@
     ]
   },
   {
-    "id": "42",
+    "id": "41",
     "name": "Cortical Labs",
     "website": "corticallabs.com",
     "description": "Biological intelligence and synthetic biological computing",
@@ -639,7 +638,7 @@
     ]
   },
   {
-    "id": "43",
+    "id": "42",
     "name": "Coviu",
     "website": "coviu.com",
     "description": "Telehealth Video Consultation",
@@ -655,7 +654,7 @@
     ]
   },
   {
-    "id": "44",
+    "id": "43",
     "name": "Culture Amp",
     "website": "cultureamp.com",
     "description": "Employee feedback and people analytics platform",
@@ -670,7 +669,7 @@
     ]
   },
   {
-    "id": "45",
+    "id": "44",
     "name": "Cuttable",
     "website": "cuttable.com",
     "description": "AI-powered video editing and content creation platform",
@@ -685,7 +684,7 @@
     ]
   },
   {
-    "id": "46",
+    "id": "45",
     "name": "Cydarm",
     "website": "cydarm.com",
     "description": "Cyber threat intelligence and security monitoring platform",
@@ -701,7 +700,7 @@
     ]
   },
   {
-    "id": "47",
+    "id": "46",
     "name": "D-Matrix",
     "website": "d-matrix.ai",
     "description": "Making Generative AI Commercially Viable",
@@ -717,7 +716,7 @@
     ]
   },
   {
-    "id": "48",
+    "id": "47",
     "name": "Daitum",
     "website": "daitum.com",
     "description": "Data management and analytics platform for enterprises",
@@ -732,7 +731,7 @@
     ]
   },
   {
-    "id": "49",
+    "id": "48",
     "name": "Dataweavers",
     "website": "dataweavers.com",
     "description": "Customer data integration and analytics platform",
@@ -747,7 +746,7 @@
     ]
   },
   {
-    "id": "50",
+    "id": "49",
     "name": "Deputy",
     "website": "deputy.com",
     "description": "Employee scheduling and workforce management platform",
@@ -762,7 +761,7 @@
     ]
   },
   {
-    "id": "51",
+    "id": "50",
     "name": "DesignCrowd",
     "website": "designcrowd.com",
     "description": "Crowdsourced graphic design and creative services marketplace",
@@ -777,7 +776,7 @@
     ]
   },
   {
-    "id": "52",
+    "id": "51",
     "name": "Dovetail",
     "website": "dovetail.com",
     "description": "User research and customer insights platform",
@@ -792,7 +791,7 @@
     ]
   },
   {
-    "id": "53",
+    "id": "52",
     "name": "Drawboard",
     "website": "drawboard.com",
     "description": "PDF collaboration and markup software",
@@ -807,7 +806,7 @@
     ]
   },
   {
-    "id": "54",
+    "id": "53",
     "name": "Earlywork",
     "website": "earlywork.co",
     "description": "Early career job matching and recruitment platform",
@@ -822,7 +821,7 @@
     ]
   },
   {
-    "id": "55",
+    "id": "54",
     "name": "EatClub",
     "website": "eatclub.com.au",
     "description": "Restaurant deals and dining discovery app for consumers",
@@ -837,7 +836,7 @@
     ]
   },
   {
-    "id": "56",
+    "id": "55",
     "name": "Eden Brew",
     "website": "edenbrew.com.au",
     "description": "Fermentation-Based Dairy Products",
@@ -852,7 +851,7 @@
     ]
   },
   {
-    "id": "57",
+    "id": "56",
     "name": "Edrolo",
     "website": "edrolo.com.au",
     "description": "Online education platform and learning management system",
@@ -868,7 +867,7 @@
     ]
   },
   {
-    "id": "58",
+    "id": "57",
     "name": "ElectraLith",
     "website": "electralith.com.au",
     "description": "Lithium Extraction Technology",
@@ -883,7 +882,7 @@
     ]
   },
   {
-    "id": "59",
+    "id": "58",
     "name": "Emesent",
     "website": "emesent.com",
     "description": "LiDAR Mapping & Autonomous Drones",
@@ -898,7 +897,7 @@
     ]
   },
   {
-    "id": "60",
+    "id": "59",
     "name": "Employment Hero",
     "website": "employmenthero.com",
     "description": "Human resources management and payroll software platform",
@@ -914,7 +913,7 @@
     ]
   },
   {
-    "id": "61",
+    "id": "60",
     "name": "Endua",
     "website": "endua.com",
     "description": "Hydrogen-Based Power Storage Systems",
@@ -929,7 +928,7 @@
     ]
   },
   {
-    "id": "62",
+    "id": "61",
     "name": "etrainu",
     "website": "etrainu.com",
     "description": "E-learning and training software platform",
@@ -945,7 +944,7 @@
     ]
   },
   {
-    "id": "63",
+    "id": "62",
     "name": "Eucalyptus",
     "website": "eucalyptus.health",
     "description": "Direct-to-consumer digital health and telemedicine platform",
@@ -960,7 +959,7 @@
     ]
   },
   {
-    "id": "64",
+    "id": "63",
     "name": "Everlab",
     "website": "everlab.com.au",
     "description": "Personalized Preventive Health Platform",
@@ -978,7 +977,7 @@
     ]
   },
   {
-    "id": "65",
+    "id": "64",
     "name": "Factor House",
     "website": "factorhouse.io",
     "description": "Investment research and portfolio management platform",
@@ -993,7 +992,7 @@
     ]
   },
   {
-    "id": "66",
+    "id": "65",
     "name": "Fetch",
     "website": "fetch.com.au",
     "description": "On-demand pet insurance",
@@ -1008,7 +1007,7 @@
     ]
   },
   {
-    "id": "67",
+    "id": "66",
     "name": "Fivecast",
     "website": "fivecast.com",
     "description": "Threat Detection via OSINT",
@@ -1024,7 +1023,7 @@
     ]
   },
   {
-    "id": "68",
+    "id": "67",
     "name": "FL0",
     "website": "fl0.com",
     "description": "Cloud infrastructure and deployment platform for developers",
@@ -1039,7 +1038,7 @@
     ]
   },
   {
-    "id": "69",
+    "id": "68",
     "name": "Fleet Space Technologies",
     "website": "fleetspace.com",
     "description": "Nanosatellite constellation and IoT connectivity solutions",
@@ -1055,7 +1054,7 @@
     ]
   },
   {
-    "id": "70",
+    "id": "69",
     "name": "Flippa",
     "website": "flippa.com",
     "description": "Online marketplace for buying and selling digital businesses",
@@ -1070,7 +1069,7 @@
     ]
   },
   {
-    "id": "71",
+    "id": "70",
     "name": "Forage",
     "website": "theforage.com",
     "description": "Virtual work experience and career development platform",
@@ -1085,7 +1084,7 @@
     ]
   },
   {
-    "id": "72",
+    "id": "71",
     "name": "FrankieOne",
     "website": "frankieone.com",
     "description": "Digital identity verification and compliance platform",
@@ -1101,7 +1100,7 @@
     ]
   },
   {
-    "id": "73",
+    "id": "72",
     "name": "Gilmour Space Technologies",
     "website": "gspace.com",
     "description": "Rocket manufacturing and satellite launch services",
@@ -1116,7 +1115,7 @@
     ]
   },
   {
-    "id": "74",
+    "id": "73",
     "name": "GlamCorner",
     "website": "glamcorner.com.au",
     "description": "Designer dress and fashion rental marketplace",
@@ -1131,7 +1130,7 @@
     ]
   },
   {
-    "id": "75",
+    "id": "74",
     "name": "Glider",
     "website": "glider.com.au",
     "description": "Bill Payment Automation & Payment Communications",
@@ -1146,7 +1145,7 @@
     ]
   },
   {
-    "id": "76",
+    "id": "75",
     "name": "Go1",
     "website": "go1.com",
     "description": "Corporate learning and training content marketplace",
@@ -1161,7 +1160,7 @@
     ]
   },
   {
-    "id": "77",
+    "id": "76",
     "name": "Gofar",
     "website": "gofar.co",
     "description": "Smart car technology and vehicle performance monitoring",
@@ -1176,7 +1175,7 @@
     ]
   },
   {
-    "id": "78",
+    "id": "77",
     "name": "GoodWork.ai",
     "website": "goodwork.ai",
     "description": "AI-powered recruitment and talent matching platform",
@@ -1191,7 +1190,7 @@
     ]
   },
   {
-    "id": "79",
+    "id": "78",
     "name": "Goterra",
     "website": "goterra.com.au",
     "description": "Insect-based Waste Processing",
@@ -1208,7 +1207,7 @@
     ]
   },
   {
-    "id": "80",
+    "id": "79",
     "name": "Gridsight",
     "website": "gridsight.ai",
     "description": "Power grid monitoring and analytics platform",
@@ -1224,7 +1223,7 @@
     ]
   },
   {
-    "id": "81",
+    "id": "80",
     "name": "HarrisonAI",
     "website": "harrison.ai",
     "description": "AI-powered medical imaging and diagnostic solutions",
@@ -1239,7 +1238,7 @@
     ]
   },
   {
-    "id": "82",
+    "id": "81",
     "name": "HealthMatch",
     "website": "healthmatch.io",
     "description": "Clinical trial matching and patient recruitment platform",
@@ -1256,7 +1255,7 @@
     ]
   },
   {
-    "id": "83",
+    "id": "82",
     "name": "Heaps Normal",
     "website": "heapsnormal.com",
     "description": "Non-alcoholic craft beer",
@@ -1273,7 +1272,7 @@
     ]
   },
   {
-    "id": "84",
+    "id": "83",
     "name": "Heidi Health",
     "website": "heidihealth.com",
     "description": "AI-powered medical documentation and clinical workflow automation",
@@ -1289,7 +1288,7 @@
     ]
   },
   {
-    "id": "85",
+    "id": "84",
     "name": "Hivery",
     "website": "hivery.com",
     "description": "AI-powered solutions for retail optimization and merchandising",
@@ -1304,7 +1303,7 @@
     ]
   },
   {
-    "id": "86",
+    "id": "85",
     "name": "Hometime",
     "website": "hometime.io",
     "description": "Short-term rental management at scale",
@@ -1319,7 +1318,7 @@
     ]
   },
   {
-    "id": "87",
+    "id": "86",
     "name": "HotDoc",
     "website": "hotdoc.com.au",
     "description": "Patient booking and healthcare practice management software",
@@ -1335,7 +1334,7 @@
     ]
   },
   {
-    "id": "88",
+    "id": "87",
     "name": "Iceberg Quantum",
     "website": "iceberg-quantum.com",
     "description": "Quantum computing architecture development",
@@ -1350,7 +1349,7 @@
     ]
   },
   {
-    "id": "89",
+    "id": "88",
     "name": "Ignition",
     "website": "ignitionapp.com",
     "description": "Client engagement and proposal automation for professional services",
@@ -1367,7 +1366,7 @@
     ]
   },
   {
-    "id": "90",
+    "id": "89",
     "name": "iion",
     "website": "iion.io",
     "description": "Unified game advertising platform",
@@ -1382,7 +1381,7 @@
     ]
   },
   {
-    "id": "91",
+    "id": "90",
     "name": "Immutable",
     "website": "immutable.com",
     "description": "Blockchain infrastructure for NFTs and Web3 gaming",
@@ -1397,7 +1396,7 @@
     ]
   },
   {
-    "id": "92",
+    "id": "91",
     "name": "ImmVirX",
     "website": "immvirx.com",
     "description": "Developing RNA oncolytic viruses for targeted cancer treatment",
@@ -1412,7 +1411,7 @@
     ]
   },
   {
-    "id": "93",
+    "id": "92",
     "name": "InDebted",
     "website": "indebted.com",
     "description": "Digital debt collection and recovery platform",
@@ -1428,7 +1427,7 @@
     ]
   },
   {
-    "id": "94",
+    "id": "93",
     "name": "Insightech",
     "website": "insightech.com",
     "description": "Digital user experience insights for businesses",
@@ -1443,7 +1442,7 @@
     ]
   },
   {
-    "id": "95",
+    "id": "94",
     "name": "Instant",
     "website": "instant.one",
     "description": "Revenue and customer retention platform",
@@ -1458,7 +1457,7 @@
     ]
   },
   {
-    "id": "96",
+    "id": "95",
     "name": "Inventia Life Science",
     "website": "inventia.life",
     "description": "Laboratory automation and 3D printing solutions",
@@ -1473,7 +1472,7 @@
     ]
   },
   {
-    "id": "97",
+    "id": "96",
     "name": "JDoodle",
     "website": "jdoodle.com",
     "description": "Online Coding & Compiler Platform",
@@ -1488,7 +1487,7 @@
     ]
   },
   {
-    "id": "98",
+    "id": "97",
     "name": "Jigspace",
     "website": "jig.space",
     "description": "Augmented Reality Platform for 3D Presentations",
@@ -1504,7 +1503,7 @@
     ]
   },
   {
-    "id": "99",
+    "id": "98",
     "name": "Kapiche",
     "website": "kapiche.com",
     "description": "AI-powered Customer Feedback Insights",
@@ -1519,7 +1518,7 @@
     ]
   },
   {
-    "id": "100",
+    "id": "99",
     "name": "Karbon",
     "website": "karbonhq.com",
     "description": "Practice management software for accounting firms",
@@ -1538,7 +1537,7 @@
     ]
   },
   {
-    "id": "101",
+    "id": "100",
     "name": "Kasada",
     "website": "kasada.io",
     "description": "Bot Mitigation & Web App Protection",
@@ -1555,7 +1554,7 @@
     ]
   },
   {
-    "id": "102",
+    "id": "101",
     "name": "Kepler Analytics",
     "website": "kepleranalytics.com",
     "description": "Retail analytics SaaS platform for data-driven insights",
@@ -1571,7 +1570,7 @@
     ]
   },
   {
-    "id": "103",
+    "id": "102",
     "name": "Kinde",
     "website": "kinde.com",
     "description": "Authentication and user management platform for developers",
@@ -1587,7 +1586,7 @@
     ]
   },
   {
-    "id": "104",
+    "id": "103",
     "name": "KiRA Biotech",
     "website": "kirabiotech.com",
     "description": "Monoclonal antibody drugs for immune system disorders",
@@ -1604,7 +1603,7 @@
     ]
   },
   {
-    "id": "105",
+    "id": "104",
     "name": "Kwetta",
     "website": "kwetta.com",
     "description": "Social media management and content creation platform",
@@ -1620,7 +1619,7 @@
     ]
   },
   {
-    "id": "106",
+    "id": "105",
     "name": "LegalVision",
     "website": "legalvision.com.au",
     "description": "Technology-driven legal services and document automation",
@@ -1639,7 +1638,7 @@
     ]
   },
   {
-    "id": "107",
+    "id": "106",
     "name": "Leonardo AI",
     "website": "leonardo.ai",
     "description": "AI-powered image generation and creative content platform",
@@ -1655,7 +1654,7 @@
     ]
   },
   {
-    "id": "108",
+    "id": "107",
     "name": "Lexer",
     "website": "lexer.io",
     "description": "Customer data platform and retail analytics",
@@ -1671,7 +1670,7 @@
     ]
   },
   {
-    "id": "109",
+    "id": "108",
     "name": "Linktree",
     "website": "linktr.ee",
     "description": "Social media link management and bio optimization platform",
@@ -1687,7 +1686,7 @@
     ]
   },
   {
-    "id": "110",
+    "id": "109",
     "name": "Loam Bio",
     "website": "loambio.com",
     "description": "Soil-Microbial Carbon Sequestration",
@@ -1702,7 +1701,7 @@
     ]
   },
   {
-    "id": "111",
+    "id": "110",
     "name": "Lorikeet",
     "website": "lorikeetcx.ai",
     "description": "Regulatory compliance and risk management platform",
@@ -1717,7 +1716,7 @@
     ]
   },
   {
-    "id": "112",
+    "id": "111",
     "name": "Lumachain",
     "website": "lumachain.io",
     "description": "AI-based Food Traceability",
@@ -1732,7 +1731,7 @@
     ]
   },
   {
-    "id": "113",
+    "id": "112",
     "name": "Lumary",
     "website": "lumary.com.au",
     "description": "Technology platform for healthcare providers and care coordination",
@@ -1748,7 +1747,7 @@
     ]
   },
   {
-    "id": "114",
+    "id": "113",
     "name": "MagicBrief",
     "website": "magicbrief.com",
     "description": "Creative advertising and marketing campaign management platform",
@@ -1763,7 +1762,7 @@
     ]
   },
   {
-    "id": "115",
+    "id": "114",
     "name": "Marloo",
     "website": "gomarloo.com",
     "description": "AI-powered business process automation platform",
@@ -1778,7 +1777,7 @@
     ]
   },
   {
-    "id": "116",
+    "id": "115",
     "name": "Marqo",
     "website": "marqo.ai",
     "description": "Vector search and AI-powered search conversion platform",
@@ -1793,7 +1792,7 @@
     ]
   },
   {
-    "id": "117",
+    "id": "116",
     "name": "Mass Dynamics",
     "website": "massdynamics.com",
     "description": "Proteomics Data Analysis & Mass Spectrometry Software",
@@ -1808,7 +1807,7 @@
     ]
   },
   {
-    "id": "118",
+    "id": "117",
     "name": "Matrak",
     "website": "matrak.com",
     "description": "End-to-End Supply Chain & Progress Tracking",
@@ -1823,7 +1822,7 @@
     ]
   },
   {
-    "id": "119",
+    "id": "118",
     "name": "me&u",
     "website": "meandu.com",
     "description": "Digital ordering and payment platform for restaurants and hospitality",
@@ -1838,7 +1837,7 @@
     ]
   },
   {
-    "id": "120",
+    "id": "119",
     "name": "Mentorloop",
     "website": "mentorloop.com",
     "description": "Mentoring and professional development platform",
@@ -1853,7 +1852,7 @@
     ]
   },
   {
-    "id": "121",
+    "id": "120",
     "name": "Mercu",
     "website": "mercu.com",
     "description": "Recruitment automation for deskless teams",
@@ -1868,7 +1867,7 @@
     ]
   },
   {
-    "id": "122",
+    "id": "121",
     "name": "MGA Thermal",
     "website": "mgathermal.com",
     "description": "Thermal Energy Storage Modules",
@@ -1883,7 +1882,7 @@
     ]
   },
   {
-    "id": "123",
+    "id": "122",
     "name": "milliBeam",
     "website": "millibeam.com",
     "description": "mmWave Chipsets for 5G+ Networks",
@@ -1898,7 +1897,7 @@
     ]
   },
   {
-    "id": "124",
+    "id": "123",
     "name": "MoreGoodDays",
     "website": "moregooddays.com",
     "description": "Chronic pain management and digital therapeutics platform",
@@ -1913,7 +1912,7 @@
     ]
   },
   {
-    "id": "125",
+    "id": "124",
     "name": "Morse Micro",
     "website": "morsemicro.com",
     "description": "WiFi chip technology and wireless communication solutions",
@@ -1928,7 +1927,7 @@
     ]
   },
   {
-    "id": "126",
+    "id": "125",
     "name": "Movus",
     "website": "movus.com.au",
     "description": "Predictive maintenance and industrial monitoring solutions",
@@ -1943,7 +1942,7 @@
     ]
   },
   {
-    "id": "127",
+    "id": "126",
     "name": "mx51",
     "website": "mx51.com",
     "description": "Payment Infrastructure & Banking Technology Platform",
@@ -1958,7 +1957,7 @@
     ]
   },
   {
-    "id": "128",
+    "id": "127",
     "name": "MyPass",
     "website": "mypass.com.au",
     "description": "Workforce competency assurance and credential management platform",
@@ -1974,7 +1973,7 @@
     ]
   },
   {
-    "id": "129",
+    "id": "128",
     "name": "Myriota",
     "website": "myriota.com",
     "description": "Satellite IoT connectivity and data transmission platform",
@@ -1990,7 +1989,7 @@
     ]
   },
   {
-    "id": "130",
+    "id": "129",
     "name": "Neara",
     "website": "neara.com",
     "description": "3D utility network modeling and infrastructure analytics",
@@ -2006,7 +2005,7 @@
     ]
   },
   {
-    "id": "131",
+    "id": "130",
     "name": "Nomad Atomics",
     "website": "nomadatomics.com",
     "description": "Quantum sensors and precision measurement technology",
@@ -2021,7 +2020,7 @@
     ]
   },
   {
-    "id": "132",
+    "id": "131",
     "name": "Nourish Ingredients",
     "website": "nourishingredients.com",
     "description": "Animal-Free Dairy Fats via Precision Fermentation",
@@ -2036,7 +2035,7 @@
     ]
   },
   {
-    "id": "133",
+    "id": "132",
     "name": "Number 8 Bio",
     "website": "number8.bio",
     "description": "Methane Reduction in Livestock via SynBio",
@@ -2051,7 +2050,7 @@
     ]
   },
   {
-    "id": "134",
+    "id": "133",
     "name": "Nura",
     "website": "nurasound.com",
     "description": "Personalized audio technology and smart headphone hardware",
@@ -2066,7 +2065,7 @@
     ]
   },
   {
-    "id": "135",
+    "id": "134",
     "name": "One Future Football",
     "website": "1ff.com",
     "description": "Football (soccer) analytics and performance tracking platform",
@@ -2081,7 +2080,7 @@
     ]
   },
   {
-    "id": "136",
+    "id": "135",
     "name": "Ortto",
     "website": "ortto.com",
     "description": "Customer journey orchestration and marketing automation platform",
@@ -2096,7 +2095,7 @@
     ]
   },
   {
-    "id": "137",
+    "id": "136",
     "name": "OwnHome",
     "website": "ownhome.co",
     "description": "Rent-to-own property platform and alternative home ownership",
@@ -2111,7 +2110,7 @@
     ]
   },
   {
-    "id": "138",
+    "id": "137",
     "name": "Particular Audience",
     "website": "particularaudience.com",
     "description": "AI-driven product personalization engine for e-commerce",
@@ -2127,7 +2126,7 @@
     ]
   },
   {
-    "id": "139",
+    "id": "138",
     "name": "Pearler",
     "website": "pearler.com",
     "description": "Automated investing & superannuation platform",
@@ -2142,7 +2141,7 @@
     ]
   },
   {
-    "id": "140",
+    "id": "139",
     "name": "Pending AI",
     "website": "pending.ai",
     "description": "Computer Vision Inspection Systems",
@@ -2157,7 +2156,7 @@
     ]
   },
   {
-    "id": "141",
+    "id": "140",
     "name": "Phocas",
     "website": "phocassoftware.com",
     "description": "Data and business intelligence software for analytics",
@@ -2172,7 +2171,7 @@
     ]
   },
   {
-    "id": "142",
+    "id": "141",
     "name": "PlanCare",
     "website": "plancare.com.au",
     "description": "Healthcare-at-home platform and care coordination services",
@@ -2188,7 +2187,7 @@
     ]
   },
   {
-    "id": "143",
+    "id": "142",
     "name": "Plotlogic",
     "website": "plotlogic.com",
     "description": "Mining Exploration & Ore Body Imaging",
@@ -2204,7 +2203,7 @@
     ]
   },
   {
-    "id": "144",
+    "id": "143",
     "name": "Preezie",
     "website": "preezie.com",
     "description": "AI shopping‑assistant quizzes for e‑commerce",
@@ -2220,7 +2219,7 @@
     ]
   },
   {
-    "id": "145",
+    "id": "144",
     "name": "Propeller Aero",
     "website": "propelleraero.com",
     "description": "Drone-based surveying and mapping analytics platform",
@@ -2235,7 +2234,7 @@
     ]
   },
   {
-    "id": "146",
+    "id": "145",
     "name": "Prospa",
     "website": "prospa.com",
     "description": "Small business lending and financial services platform",
@@ -2250,7 +2249,7 @@
     ]
   },
   {
-    "id": "147",
+    "id": "146",
     "name": "Prospection",
     "website": "prospection.com",
     "description": "Pharma Real World Evidence",
@@ -2265,7 +2264,7 @@
     ]
   },
   {
-    "id": "148",
+    "id": "147",
     "name": "Pushas",
     "website": "pushas.com.au",
     "description": "Digital infrastructure for sneaker resale",
@@ -2281,7 +2280,7 @@
     ]
   },
   {
-    "id": "149",
+    "id": "148",
     "name": "Q-CTRL",
     "website": "q-ctrl.com",
     "description": "Quantum Infrastructure Software",
@@ -2296,7 +2295,7 @@
     ]
   },
   {
-    "id": "150",
+    "id": "149",
     "name": "Qsic",
     "website": "getqsic.com",
     "description": "In‑store AI audio & retail media platform",
@@ -2311,7 +2310,7 @@
     ]
   },
   {
-    "id": "151",
+    "id": "150",
     "name": "Quantum Brilliance",
     "website": "quantumbrilliance.com",
     "description": "Room-Temperature Quantum Processors",
@@ -2329,7 +2328,7 @@
     ]
   },
   {
-    "id": "152",
+    "id": "151",
     "name": "Quasar Satellite Technologies",
     "website": "quasarsat.com",
     "description": "Ground-Station Antennas & Satellite Communications",
@@ -2344,7 +2343,7 @@
     ]
   },
   {
-    "id": "153",
+    "id": "152",
     "name": "QuintessenceLabs",
     "website": "quintessencelabs.com",
     "description": "Quantum-safe Encryption",
@@ -2359,7 +2358,7 @@
     ]
   },
   {
-    "id": "154",
+    "id": "153",
     "name": "Qwilr",
     "website": "qwilr.com",
     "description": "Interactive document creation and proposal automation platform",
@@ -2374,7 +2373,7 @@
     ]
   },
   {
-    "id": "155",
+    "id": "154",
     "name": "Rainstick",
     "website": "rainstick.com.au",
     "description": "Electric‑Field Crop Enhancement",
@@ -2389,7 +2388,7 @@
     ]
   },
   {
-    "id": "156",
+    "id": "155",
     "name": "RapidAIM",
     "website": "rapidaim.io",
     "description": "Pest Detection & Biosecurity Sensors",
@@ -2404,7 +2403,7 @@
     ]
   },
   {
-    "id": "157",
+    "id": "156",
     "name": "RateUs",
     "website": "rateus.com",
     "description": "Online reputation and review management platform for businesses",
@@ -2419,7 +2418,7 @@
     ]
   },
   {
-    "id": "158",
+    "id": "157",
     "name": "Redactive",
     "website": "redactive.ai",
     "description": "Enterprise AI data security",
@@ -2434,7 +2433,7 @@
     ]
   },
   {
-    "id": "159",
+    "id": "158",
     "name": "Redback Technologies",
     "website": "redbacktech.com",
     "description": "Solar battery and renewable energy storage solutions",
@@ -2449,7 +2448,7 @@
     ]
   },
   {
-    "id": "160",
+    "id": "159",
     "name": "Redbubble",
     "website": "redbubble.com",
     "description": "Print-on-demand marketplace for independent artists",
@@ -2464,7 +2463,7 @@
     ]
   },
   {
-    "id": "161",
+    "id": "160",
     "name": "Reejig",
     "website": "reejig.com",
     "description": "AI-powered workforce intelligence and talent optimization platform",
@@ -2479,7 +2478,7 @@
     ]
   },
   {
-    "id": "162",
+    "id": "161",
     "name": "Restoke.ai",
     "website": "restoke.ai",
     "description": "AI-Powered restaurant management",
@@ -2494,7 +2493,7 @@
     ]
   },
   {
-    "id": "163",
+    "id": "162",
     "name": "RobobAI",
     "website": "robobai.com",
     "description": "AI-driven payment analytics",
@@ -2509,7 +2508,7 @@
     ]
   },
   {
-    "id": "164",
+    "id": "163",
     "name": "Roborigger",
     "website": "roborigger.com.au",
     "description": "Automated rigging and construction robotics",
@@ -2524,7 +2523,7 @@
     ]
   },
   {
-    "id": "165",
+    "id": "164",
     "name": "Rokt",
     "website": "rokt.com",
     "description": "E-commerce personalization and customer acquisition platform",
@@ -2539,7 +2538,7 @@
     ]
   },
   {
-    "id": "166",
+    "id": "165",
     "name": "SafetyCulture",
     "website": "safetyculture.com",
     "description": "Workplace safety management and inspection software platform",
@@ -2555,7 +2554,7 @@
     ]
   },
   {
-    "id": "167",
+    "id": "166",
     "name": "Sahha",
     "website": "sahha.ai",
     "description": "Mental health and wellness tracking platform",
@@ -2570,7 +2569,7 @@
     ]
   },
   {
-    "id": "168",
+    "id": "167",
     "name": "Sapia",
     "website": "sapia.ai",
     "description": "AI-powered Recruitment & Talent Assessment Platform",
@@ -2586,7 +2585,7 @@
     ]
   },
   {
-    "id": "169",
+    "id": "168",
     "name": "Sauce",
     "website": "sauce.app",
     "description": "AI customer insights for product teams.",
@@ -2601,7 +2600,7 @@
     ]
   },
   {
-    "id": "170",
+    "id": "169",
     "name": "Secure Code Warrior",
     "website": "securecodewarrior.com",
     "description": "Developer security training and secure coding education platform",
@@ -2616,7 +2615,7 @@
     ]
   },
   {
-    "id": "171",
+    "id": "170",
     "name": "Sendle",
     "website": "sendle.com",
     "description": "Carbon-neutral Parcel Delivery & Shipping Platform",
@@ -2631,7 +2630,7 @@
     ]
   },
   {
-    "id": "172",
+    "id": "171",
     "name": "Sherlok",
     "website": "sherlok.com.au",
     "description": "Australia’s first automated repricing and refinancing tool for brokers",
@@ -2646,7 +2645,7 @@
     ]
   },
   {
-    "id": "173",
+    "id": "172",
     "name": "Shippit",
     "website": "shippit.com",
     "description": "E-commerce shipping and fulfillment platform",
@@ -2658,6 +2657,21 @@
     ],
     "allWorkTypes": [
       "Hybrid"
+    ]
+  },
+  {
+    "id": "173",
+    "name": "Simply Wall St",
+    "website": "simplywall.st",
+    "description": "Stock research platform for every company in the world",
+    "year": "2014",
+    "location": "Sydney",
+    "workType": "Remote",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "Remote"
     ]
   },
   {

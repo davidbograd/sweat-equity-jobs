@@ -1,19 +1,22 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import CompaniesStats from "../components/CompaniesStats";
 import CompaniesGrid from "../components/CompaniesGrid";
-import Header from "../components/Header";
+import StickyLocationNav from "../components/StickyLocationNav";
 import FAQ from "../components/FAQ";
 import CTAButton from "../components/CTAButton";
 import LogoMarquee from "../components/LogoMarquee";
-import companies from "../data/companies.json";
 import {
   generateWebsiteSchema,
   generateItemListSchema,
 } from "../lib/structuredData";
+import companies from "../data/companies.json";
 
 // Generate structured data for the front page
-function generateStructuredData() {
+function generateStructuredData(companies: any[]) {
   const websiteSchema = generateWebsiteSchema();
   const itemListSchema = generateItemListSchema(
     companies,
@@ -24,8 +27,57 @@ function generateStructuredData() {
   return [websiteSchema, itemListSchema];
 }
 
-export default function Home() {
-  const structuredData = generateStructuredData();
+function calculateStats(companies: any[]) {
+  const allCities = new Set<string>();
+  const allWorkTypes = new Set<string>();
+
+  companies.forEach((company) => {
+    // Add all locations for this company
+    company.allLocations.forEach((location: string) => {
+      if (location && location.trim()) {
+        allCities.add(location);
+      }
+    });
+
+    // Add all work types for this company
+    company.allWorkTypes.forEach((workType: string) => {
+      if (workType && workType.trim()) {
+        allWorkTypes.add(workType);
+      }
+    });
+  });
+
+  return {
+    citiesCount: allCities.size,
+    workArrangementsCount: allWorkTypes.size,
+  };
+}
+
+function HomeClient() {
+  const [headerMode, setHeaderMode] = useState<"logo-only" | "full">(
+    "logo-only"
+  );
+  const structuredData = generateStructuredData(companies);
+  const { citiesCount, workArrangementsCount } = calculateStats(companies);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const companiesSection = document.getElementById("companies");
+      if (companiesSection) {
+        const companiesSectionTop = companiesSection.offsetTop;
+        const scrollPosition = window.scrollY + 300; // Increased offset for better UX
+
+        if (scrollPosition >= companiesSectionTop) {
+          setHeaderMode("full");
+        } else {
+          setHeaderMode("logo-only");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -39,6 +91,9 @@ export default function Home() {
       ))}
 
       <div className="min-h-screen">
+        {/* Sticky Navigation */}
+        <StickyLocationNav mode={headerMode} isSticky={true} />
+
         {/* Hero Section */}
         <div className="relative w-full pb-8">
           {/* Background gradients */}
@@ -75,13 +130,9 @@ export default function Home() {
             />
           </div>
 
-          <div className="relative z-10">
-            <Header isHomePage={true} />
-          </div>
-
-          <main className="max-w-[1462px] mx-auto px-6 text-center relative z-10">
+          <main className="max-w-[1600px] mx-auto px-6 text-center relative z-10 mt-8 pt-28">
             <h1 className="text-3xl md:text-7xl mb-4 leading-tight">
-              Find Australian startups that give equity
+              Find Australian startups offering equity
             </h1>
 
             <p className="text-xl text-black mb-8 mx-auto opacity-65">
@@ -184,7 +235,7 @@ export default function Home() {
         {/* Companies Section */}
         <section
           id="companies"
-          className="text-left max-w-[1462px] mx-auto mt-12 lg:mt-20 px-5"
+          className="text-left max-w-[1600px] mx-auto mt-12 lg:mt-20 px-5"
         >
           <div className="pl-4 md:pl-6">
             <h2 className="text-4xl md:text-5xl text-black mb-4 md:mb-6">
@@ -194,8 +245,8 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-baseline md:justify-between md:gap-4 mb-6">
               <CompaniesStats
                 companiesCount={companies.length}
-                citiesCount={6}
-                workArrangementsCount={3}
+                citiesCount={citiesCount}
+                workArrangementsCount={workArrangementsCount}
               />
 
               <Link
@@ -227,4 +278,9 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+// Default export as server component
+export default function Home() {
+  return <HomeClient />;
 }

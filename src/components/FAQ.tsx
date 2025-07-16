@@ -50,9 +50,9 @@ export default function FAQ() {
   };
 
   return (
-    <section className="text-left max-w-[1462px] mx-auto mt-16 lg:mt-24 px-5 pb-16">
-      <div className="pl-4 md:pl-6">
-        <h2 className="text-4xl md:text-5xl text-black mb-8 md:mb-12">
+    <section className="text-left max-w-[1600px] mx-auto mt-16 lg:mt-24 px-5 pb-16">
+      <div className="">
+        <h2 className="text-4xl md:text-5xl text-black mb-8 md:mb-12 pl-4 md:pl-6">
           Frequently Asked Questions
         </h2>
 

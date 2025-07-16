@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import CompaniesStats from "../../components/CompaniesStats";
 import CompaniesGrid from "../../components/CompaniesGrid";
-import CityNavigation from "../../components/CityNavigation";
-import Header from "../../components/Header";
+import StickyLocationNav from "../../components/StickyLocationNav";
 import companies from "../../data/companies.json";
 import {
   generateBreadcrumbSchema,
@@ -147,10 +146,10 @@ export default async function CityPage({ params }: CityPageProps) {
       ))}
 
       <div className="min-h-screen">
-        <Header />
+        <StickyLocationNav currentLocation={city} />
 
         {/* Main Content */}
-        <main className="max-w-[1462px] mx-auto px-6">
+        <main className="max-w-[1600px] mx-auto px-6 pt-40">
           <div className="pl-4 md:pl-6">
             <h1 className="text-4xl md:text-5xl text-black mb-4 md:mb-6">
               {capitalizeCityName(city)} companies offering equity
@@ -190,7 +189,71 @@ export default async function CityPage({ params }: CityPageProps) {
             expandedByDefault={true}
           />
 
-          <CityNavigation currentCity={city} currentPage="city" />
+          {/* Location Navigation */}
+          <div className="mt-12 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 justify-center justify-items-start mx-auto w-fit">
+              {city.toLowerCase() !== "sydney" && (
+                <Link
+                  href="/sydney"
+                  className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+                >
+                  Sydney →
+                </Link>
+              )}
+              {city.toLowerCase() !== "melbourne" && (
+                <Link
+                  href="/melbourne"
+                  className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+                >
+                  Melbourne →
+                </Link>
+              )}
+              {city.toLowerCase() !== "brisbane" && (
+                <Link
+                  href="/brisbane"
+                  className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+                >
+                  Brisbane →
+                </Link>
+              )}
+              {city.toLowerCase() !== "perth" && (
+                <Link
+                  href="/perth"
+                  className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+                >
+                  Perth →
+                </Link>
+              )}
+              {city.toLowerCase() !== "adelaide" && (
+                <Link
+                  href="/adelaide"
+                  className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+                >
+                  Adelaide →
+                </Link>
+              )}
+              {city.toLowerCase() !== "canberra" && (
+                <Link
+                  href="/canberra"
+                  className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+                >
+                  Canberra →
+                </Link>
+              )}
+              <Link
+                href="/other"
+                className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+              >
+                Other cities →
+              </Link>
+              <Link
+                href="/remote"
+                className="text-black hover:text-gray-800 hover:underline hover:underline-offset-4 opacity-65"
+              >
+                Remote →
+              </Link>
+            </div>
+          </div>
         </main>
       </div>
     </>
