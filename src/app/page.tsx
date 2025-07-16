@@ -13,10 +13,11 @@ import {
   generateWebsiteSchema,
   generateItemListSchema,
 } from "../lib/structuredData";
+import { Company } from "../lib/types";
 import companies from "../data/companies.json";
 
 // Generate structured data for the front page
-function generateStructuredData(companies: any[]) {
+function generateStructuredData(companies: Company[]) {
   const websiteSchema = generateWebsiteSchema();
   const itemListSchema = generateItemListSchema(
     companies,
@@ -27,7 +28,7 @@ function generateStructuredData(companies: any[]) {
   return [websiteSchema, itemListSchema];
 }
 
-function calculateStats(companies: any[]) {
+function calculateStats(companies: Company[]) {
   const allCities = new Set<string>();
   const allWorkTypes = new Set<string>();
 

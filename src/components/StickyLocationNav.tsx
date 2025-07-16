@@ -2,8 +2,13 @@ import Link from "next/link";
 
 interface StickyLocationNavProps {
   currentLocation?: string;
-  mode?: "full" | "logo-only";
+  mode?: "logo-only" | "full";
   isSticky?: boolean;
+}
+
+interface Location {
+  name: string;
+  href: string;
 }
 
 export default function StickyLocationNav({
@@ -11,7 +16,7 @@ export default function StickyLocationNav({
   mode = "full",
   isSticky = true,
 }: StickyLocationNavProps) {
-  const locations = [
+  const locations: Location[] = [
     { name: "All companies", href: "/#companies" },
     { name: "Sydney", href: "/sydney" },
     { name: "Melbourne", href: "/melbourne" },
@@ -23,7 +28,7 @@ export default function StickyLocationNav({
     { name: "Remote", href: "/remote" },
   ];
 
-  const isCurrentLocation = (location: any) => {
+  const isCurrentLocation = (location: Location) => {
     if (location.name === "All companies") {
       return !currentLocation; // Mark as current when on homepage
     }
