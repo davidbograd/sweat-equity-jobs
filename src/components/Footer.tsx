@@ -30,8 +30,8 @@ export default function Footer() {
 
             {/* 2. Disclaimer (center on desktop) */}
             <div className="text-left md:text-center">
-              We try to keep all data accurate, but startups moves quick. If any
-              thing&apos;s wrong, please let us know.
+              We try to keep all data accurate, but startups move quick. If
+              anything&apos;s wrong, please let us know.
             </div>
 
             {/* 3. Logos (right on desktop) */}
