@@ -71,13 +71,10 @@ export default function StickyLocationNav({
 
   return (
     <div
-      className={`block fixed top-6 left-0 right-0 z-50 px-6 ${getAnimationClasses()}`}
+      className={`block fixed top-6 left-0 right-0 z-50 px-3 md:px-6 ${getAnimationClasses()}`}
     >
       <div className="w-full md:max-w-fit mx-auto">
-        <div
-          className="backdrop-blur-md bg-white/95 border border-gray-200/50 rounded-full px-4 md:px-6 py-3 shadow-sm backdrop-saturate-150 overflow-hidden"
-          style={{ isolation: "isolate" }}
-        >
+        <div className="backdrop-blur-md bg-white/95 border border-gray-200/50 rounded-xl md:rounded-full px-4 md:px-6 py-3 shadow-sm backdrop-saturate-150">
           <div className="flex items-center justify-between md:justify-start md:space-x-6">
             {/* Logo - Hidden on mobile, visible on desktop */}
             <Link

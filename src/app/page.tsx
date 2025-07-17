@@ -228,7 +228,7 @@ function HomeClient() {
             </h1>
 
             <p className="text-xl text-black mb-8 mx-auto opacity-65">
-              A curated list of Aussie startups where equity is part of your
+              A curated list of Aussie companies where equity is part of your
               compensation.
             </p>
 
