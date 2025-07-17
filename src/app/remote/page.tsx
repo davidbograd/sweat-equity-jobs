@@ -120,7 +120,7 @@ export default function RemotePage() {
       ))}
 
       <div className="min-h-screen">
-        <StickyLocationNav currentLocation="remote" />
+        <StickyLocationNav currentLocation="remote" shouldAnimate={false} />
 
         {/* Main Content */}
         <main className="max-w-[1600px] mx-auto px-6 pt-40">

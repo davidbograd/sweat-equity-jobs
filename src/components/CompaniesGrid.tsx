@@ -80,11 +80,11 @@ export default function CompaniesGrid({
           <div className="relative z-10 text-center pt-8">
             <button
               onClick={() => setIsExpanded(true)}
-              className="px-8 py-4 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-300 text-lg font-medium"
+              className="px-4 py-2 text-black hover:text-gray-600 transition-colors duration-300 text-lg font-medium flex items-center gap-2 mx-auto"
               aria-expanded={isExpanded}
               aria-controls="companies-grid"
             >
-              Show all {companies.length} companies
+              Show all {companies.length} companies ↓
             </button>
           </div>
         </div>

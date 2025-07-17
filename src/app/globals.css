@@ -153,3 +153,27 @@ body {
 .animate-marquee-left {
   animation: marquee-left 30s linear infinite;
 }
+
+/* Sticky header fade-in animation */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sticky header fade-out animation */
+@keyframes fadeOutSlide {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}

@@ -1,9 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
 
 interface StickyLocationNavProps {
   currentLocation?: string;
-  mode?: "logo-only" | "full";
-  isSticky?: boolean;
+  shouldAnimate?: boolean;
+  isExiting?: boolean;
 }
 
 interface Location {
@@ -13,11 +16,30 @@ interface Location {
 
 export default function StickyLocationNav({
   currentLocation,
-  mode = "full",
-  isSticky = true,
+  shouldAnimate = false,
+  isExiting = false,
 }: StickyLocationNavProps) {
-  const locations: Location[] = [
-    { name: "All companies", href: "/#companies" },
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const cities: Location[] = [
     { name: "Sydney", href: "/sydney" },
     { name: "Melbourne", href: "/melbourne" },
     { name: "Brisbane", href: "/brisbane" },
@@ -25,35 +47,39 @@ export default function StickyLocationNav({
     { name: "Adelaide", href: "/adelaide" },
     { name: "Canberra", href: "/canberra" },
     { name: "Other cities", href: "/other" },
-    { name: "Remote", href: "/remote" },
   ];
 
-  const isCurrentLocation = (location: Location) => {
-    if (location.name === "All companies") {
-      return !currentLocation; // Mark as current when on homepage
-    }
-    if (currentLocation === "other") {
-      return location.name === "Other cities";
-    }
-    if (currentLocation === "remote") {
-      return location.name === "Remote";
-    }
-    return location.name.toLowerCase() === currentLocation?.toLowerCase();
+  const getCurrentCityName = () => {
+    if (!currentLocation) return "Select city";
+    if (currentLocation === "other") return "Other cities";
+    if (currentLocation === "remote") return "Select city";
+    return currentLocation.charAt(0).toUpperCase() + currentLocation.slice(1);
   };
 
-  const positionClass = isSticky ? "fixed top-6" : "relative";
+  // Determine animation classes
+  const getAnimationClasses = () => {
+    if (!shouldAnimate) {
+      return ""; // No animation for other pages
+    }
+
+    if (isExiting) {
+      return "animate-[fadeOutSlide_0.3s_ease-in_0s_1_forwards]";
+    }
+
+    return "opacity-0 -translate-y-2 animate-[fadeInSlide_0.5s_ease-out_0s_1_forwards]";
+  };
 
   return (
     <div
-      className={`hidden md:block ${positionClass} left-0 right-0 z-50 px-6 transition-all duration-300 ease-in-out`}
+      className={`block fixed top-6 left-0 right-0 z-50 px-6 ${getAnimationClasses()}`}
     >
-      <div className="max-w-fit mx-auto">
-        <div className="backdrop-blur-md bg-white/80 border border-gray-200/50 rounded-full px-6 py-3 shadow-sm transition-all duration-500 ease-in-out">
-          <div className="flex items-center space-x-6">
-            {/* Logo */}
+      <div className="w-full md:max-w-fit mx-auto">
+        <div className="backdrop-blur-md bg-white/95 border border-gray-200/50 rounded-full px-4 md:px-6 py-3 shadow-sm backdrop-saturate-150">
+          <div className="flex items-center justify-between md:justify-start md:space-x-6">
+            {/* Logo - Hidden on mobile, visible on desktop */}
             <Link
               href="/"
-              className="flex items-center transition-all duration-300 ease-in-out"
+              className="hidden md:flex items-center transition-all duration-300 ease-in-out"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,32 +152,112 @@ export default function StickyLocationNav({
               </svg>
             </Link>
 
-            {/* Navigation - with smooth transitions */}
-            <div
-              className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                mode === "full"
-                  ? "max-w-none opacity-100 translate-x-0"
-                  : "max-w-0 opacity-0 translate-x-4"
-              }`}
-            >
-              <div className="flex items-center space-x-1 whitespace-nowrap">
-                {locations.map((location) => {
-                  const isCurrent = isCurrentLocation(location);
-                  return (
-                    <Link
-                      key={location.href}
-                      href={location.href}
-                      className={`px-3 py-1.5 text-sm rounded-full transition-all duration-300 ease-in-out ${
-                        isCurrent
-                          ? "text-black underline underline-offset-4"
-                          : "text-gray-700 hover:text-black"
-                      }`}
-                    >
-                      {location.name}
-                    </Link>
-                  );
-                })}
+            {/* Mobile Navigation */}
+            <div className="flex items-center justify-between w-full md:hidden">
+              {/* All companies */}
+              <Link
+                href="/#companies"
+                className={`px-2 py-1.5 text-sm rounded-full transition-all duration-300 ease-in-out ${
+                  !currentLocation
+                    ? "text-black underline underline-offset-4"
+                    : "text-gray-700"
+                }`}
+              >
+                All companies
+              </Link>
+
+              {/* City Dropdown */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="px-2 py-1.5 text-sm rounded-full transition-all duration-300 ease-in-out text-gray-700 flex items-center gap-1"
+                >
+                  {getCurrentCityName()}
+                  <svg
+                    className={`w-3 h-3 transition-transform duration-200 ${
+                      isDropdownOpen ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                {/* Dropdown Menu */}
+                {isDropdownOpen && (
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg py-2 min-w-32 z-50">
+                    {cities.map((city) => (
+                      <Link
+                        key={city.href}
+                        href={city.href}
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-black transition-colors"
+                      >
+                        {city.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
+
+              {/* Remote */}
+              <Link
+                href="/remote"
+                className={`px-2 py-1.5 text-sm rounded-full transition-all duration-300 ease-in-out ${
+                  currentLocation === "remote"
+                    ? "text-black underline underline-offset-4"
+                    : "text-gray-700"
+                }`}
+              >
+                Remote
+              </Link>
+            </div>
+
+            {/* Desktop Navigation Links */}
+            <div className="hidden md:flex items-center space-x-1">
+              <Link
+                href="/#companies"
+                className={`px-3 py-1.5 text-sm rounded-full transition-all duration-300 ease-in-out ${
+                  !currentLocation
+                    ? "text-black underline underline-offset-4"
+                    : "text-gray-700 hover:text-black"
+                }`}
+              >
+                All companies
+              </Link>
+              {cities.map((city) => (
+                <Link
+                  key={city.href}
+                  href={city.href}
+                  className={`px-3 py-1.5 text-sm rounded-full transition-all duration-300 ease-in-out ${
+                    (currentLocation === "other" &&
+                      city.name === "Other cities") ||
+                    (currentLocation &&
+                      city.name.toLowerCase() === currentLocation.toLowerCase())
+                      ? "text-black underline underline-offset-4"
+                      : "text-gray-700 hover:text-black"
+                  }`}
+                >
+                  {city.name}
+                </Link>
+              ))}
+              <Link
+                href="/remote"
+                className={`px-3 py-1.5 text-sm rounded-full transition-all duration-300 ease-in-out ${
+                  currentLocation === "remote"
+                    ? "text-black underline underline-offset-4"
+                    : "text-gray-700 hover:text-black"
+                }`}
+              >
+                Remote
+              </Link>
             </div>
           </div>
         </div>

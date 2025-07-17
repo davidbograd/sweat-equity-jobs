@@ -146,7 +146,7 @@ export default async function CityPage({ params }: CityPageProps) {
       ))}
 
       <div className="min-h-screen">
-        <StickyLocationNav currentLocation={city} />
+        <StickyLocationNav currentLocation={city} shouldAnimate={false} />
 
         {/* Main Content */}
         <main className="max-w-[1600px] mx-auto px-6 pt-40">

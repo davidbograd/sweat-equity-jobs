@@ -142,7 +142,7 @@ export default function OtherCitiesPage() {
       ))}
 
       <div className="min-h-screen">
-        <StickyLocationNav currentLocation="other" />
+        <StickyLocationNav currentLocation="other" shouldAnimate={false} />
 
         {/* Main Content */}
         <main className="max-w-[1600px] mx-auto px-6 pt-40">
