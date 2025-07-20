@@ -8,16 +8,27 @@ import {
   generateBreadcrumbSchema,
   generateItemListSchema,
 } from "../../lib/structuredData";
+import { sortCompaniesByName } from "../../lib/utils";
 import type { Company } from "../../lib/types";
+
+// Calculate remote companies count for metadata
+const remoteCompaniesForMeta = sortCompaniesByName(
+  (companies as Company[]).filter(
+    (company) =>
+      company.workType.toLowerCase() === "remote" ||
+      (company.allWorkTypes &&
+        company.allWorkTypes.some((type) => type.toLowerCase() === "remote"))
+  )
+);
 
 // Metadata for the remote page
 export const metadata: Metadata = {
-  title: "Remote companies offering equity - Sweat Equity Jobs",
+  title: `${remoteCompaniesForMeta.length} remote Australian companies offering equity - Sweat Equity`,
   description:
     "Find Australian startups that offer remote work and equity as part of your compensation package.",
   metadataBase: new URL("https://equityjobs.com.au"),
   openGraph: {
-    title: "Remote companies offering equity - Sweat Equity Jobs",
+    title: "200+ Remote companies offering equity - Sweat Equity Jobs",
     description:
       "Find Australian startups that offer remote work and equity as part of your compensation package.",
     url: "https://equityjobs.com.au/remote",
@@ -35,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Remote companies offering equity - Sweat Equity Jobs",
+    title: "200+ Remote companies offering equity - Sweat Equity Jobs",
     description:
       "Find Australian startups that offer remote work and equity as part of your compensation package.",
     images: ["/images/open-graph-equity.png"],
@@ -98,8 +109,8 @@ function generateRemoteStructuredData(filteredCompanies: Company[]) {
 }
 
 export default function RemotePage() {
-  // Filter companies for remote work
-  const remoteCompanies = filterRemoteCompanies();
+  // Filter companies for remote work and sort alphabetically
+  const remoteCompanies = sortCompaniesByName(filterRemoteCompanies());
 
   // Get stats for remote companies
   const citiesCount = getUniqueCitiesCount(remoteCompanies);

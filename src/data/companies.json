@@ -3123,12 +3123,12 @@
     "description": "Cultivated meat and cellular agriculture technology",
     "year": "2019",
     "location": "Sydney",
-    "workType": "Hybrid",
+    "workType": "On-site",
     "allLocations": [
       "Sydney"
     ],
     "allWorkTypes": [
-      "Hybrid"
+      "On-site"
     ]
   },
   {
@@ -3256,6 +3256,41 @@
       "Sydney"
     ],
     "allWorkTypes": [
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "212",
+    "name": "Crypto Tax Calculator",
+    "website": "cryptotaxcalculator.io",
+    "description": "Easy crypto tax reporting for everyone",
+    "year": "2018",
+    "location": "Melbourne",
+    "workType": "Remote",
+    "allLocations": [
+      "Melbourne",
+      "Sydney",
+      "Brisbane",
+      "Perth",
+      "Adelaide"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
+  },
+  {
+    "id": "213",
+    "name": "EQL",
+    "website": "EQL.com",
+    "description": "Tech for passion-fueled e-commerce moments",
+    "year": "2021",
+    "location": "Melbourne",
+    "workType": "Remote",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Remote",
       "Hybrid"
     ]
   }

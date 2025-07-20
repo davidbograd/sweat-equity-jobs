@@ -3,16 +3,18 @@ import Script from "next/script";
 import "./globals.css";
 import Footer from "../components/Footer";
 import ErrorBoundary from "../components/ErrorBoundary";
+import companies from "../data/companies.json";
 
 export const metadata: Metadata = {
-  title: "Find Australian companies giving startup equity - Sweat Equity Jobs",
-  description: "Australian companies giving startup equity",
+  title: `Discover ${companies.length}+ Australian Startups That Offer Equity`,
+  description:
+    "Find Australian startups that give equity as part of your compensation package. A curated list of 200+ Aussie companies offering employee equity across Sydney, Melbourne, Brisbane and more.",
   metadataBase: new URL("https://equityjobs.com.au"),
   openGraph: {
     title:
-      "Find Australian companies giving startup equity - Sweat Equity Jobs",
+      "Find 200+ Australian companies offering startup equity - Sweat Equity Jobs",
     description:
-      "Find Australian startups that give equity as part of your compensation package. A curated list of +200 Aussie companies offering employee equity.",
+      "Find Australian startups that offers equity as part of your compensation package. A curated list of 200+ Aussie companies granting employee equity across Sydney, Melbourne, Brisbane and more.",
     url: "https://equityjobs.com.au",
     siteName: "Sweat Equity Jobs",
     images: [
@@ -29,9 +31,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Find Australian companies giving startup equity - Sweat Equity Jobs",
+      "Find 200+ Australian companies offering startup equity - Sweat Equity Jobs",
     description:
-      "Find Australian startups that give equity as part of your compensation package. A curated list of +200 Aussie companies offering employee equity.",
+      "Find Australian startups that give equity as part of your compensation package. A curated list of 200+ Aussie companies offering employee equity across Sydney, Melbourne, Brisbane and more.",
     images: ["/images/open-graph-equity.png"],
   },
   robots: {

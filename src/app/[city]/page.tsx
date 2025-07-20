@@ -9,6 +9,7 @@ import {
   generateBreadcrumbSchema,
   generateItemListSchema,
 } from "../../lib/structuredData";
+import { sortCompaniesByName } from "../../lib/utils";
 import type { Company, CityPageProps } from "../../lib/types";
 
 // Generate metadata for the city page
@@ -18,12 +19,16 @@ export async function generateMetadata({
   const { city } = await params;
   const capitalizedCity = city.charAt(0).toUpperCase() + city.slice(1);
 
+  // Get company count for this city
+  const filteredCompanies = sortCompaniesByName(filterCompaniesByCity(city));
+  const companyCount = filteredCompanies.length;
+
   return {
-    title: `${capitalizedCity} companies offering equity - Sweat Equity Jobs`,
+    title: `${companyCount} ${capitalizedCity} companies offering equity - Sweat Equity Jobs`,
     description: `Find Australian startups in ${capitalizedCity} that offer equity as part of your compensation package.`,
     metadataBase: new URL("https://equityjobs.com.au"),
     openGraph: {
-      title: `${capitalizedCity} companies offering equity - Sweat Equity Jobs`,
+      title: `200+ ${capitalizedCity} companies offering equity - Sweat Equity Jobs`,
       description: `Find Australian startups in ${capitalizedCity} that offer equity as part of your compensation package.`,
       url: `https://equityjobs.com.au/${city.toLowerCase()}`,
       siteName: "Sweat Equity Jobs",
@@ -40,7 +45,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${capitalizedCity} companies offering equity - Sweat Equity Jobs`,
+      title: `200+ ${capitalizedCity} companies offering equity - Sweat Equity Jobs`,
       description: `Find Australian startups in ${capitalizedCity} that offer equity as part of your compensation package.`,
       images: ["/images/open-graph-equity.png"],
     },
@@ -123,8 +128,8 @@ export default async function CityPage({ params }: CityPageProps) {
     notFound();
   }
 
-  // Filter companies for this city
-  const filteredCompanies = filterCompaniesByCity(city);
+  // Filter companies for this city and sort alphabetically
+  const filteredCompanies = sortCompaniesByName(filterCompaniesByCity(city));
 
   // Get stats for filtered companies
   const citiesCount = 1; // Always show 1 city for city-specific pages

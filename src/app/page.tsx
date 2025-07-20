@@ -14,6 +14,7 @@ import {
   generateItemListSchema,
 } from "../lib/structuredData";
 import { Company } from "../lib/types";
+import { sortCompaniesByName } from "../lib/utils";
 import companies from "../data/companies.json";
 
 // Generate structured data for the front page
@@ -58,8 +59,13 @@ function HomeClient() {
   const [stickyHeaderState, setStickyHeaderState] = useState<
     "hidden" | "entering" | "visible" | "exiting"
   >("hidden");
-  const structuredData = generateStructuredData(companies);
-  const { citiesCount, workArrangementsCount } = calculateStats(companies);
+
+  // Sort companies alphabetically
+  const sortedCompanies = sortCompaniesByName(companies);
+
+  const structuredData = generateStructuredData(sortedCompanies);
+  const { citiesCount, workArrangementsCount } =
+    calculateStats(sortedCompanies);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -322,7 +328,7 @@ function HomeClient() {
 
         {/* Logo Marquee - Full Width */}
         <div className="w-full mb-12 md:mb-20">
-          <LogoMarquee companies={companies} />
+          <LogoMarquee companies={sortedCompanies} />
         </div>
         {/* Companies Section */}
         <section
@@ -336,7 +342,7 @@ function HomeClient() {
 
             <div className="flex flex-col md:flex-row md:items-baseline md:justify-between md:gap-4 mb-6">
               <CompaniesStats
-                companiesCount={companies.length}
+                companiesCount={sortedCompanies.length}
                 citiesCount={citiesCount}
                 workArrangementsCount={workArrangementsCount}
               />
@@ -362,7 +368,7 @@ function HomeClient() {
             </Link>
           </div>
 
-          <CompaniesGrid companies={companies} />
+          <CompaniesGrid companies={sortedCompanies} />
         </section>
 
         {/* FAQ Section */}

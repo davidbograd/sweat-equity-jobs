@@ -8,16 +8,47 @@ import {
   generateBreadcrumbSchema,
   generateItemListSchema,
 } from "../../lib/structuredData";
+import { sortCompaniesByName } from "../../lib/utils";
 import type { Company } from "../../lib/types";
+
+// Define the major cities to exclude
+const majorCities = [
+  "sydney",
+  "melbourne",
+  "brisbane",
+  "perth",
+  "adelaide",
+  "canberra",
+];
+
+// Calculate other cities companies count for metadata
+const otherCitiesCompaniesForMeta = sortCompaniesByName(
+  (companies as Company[]).filter((company) => {
+    // Check if company's primary location is not in major cities
+    const isPrimaryLocationMajor = majorCities.includes(
+      company.location.toLowerCase()
+    );
+
+    // Check if any of the company's locations are in major cities
+    const hasAnyMajorLocation = company.allLocations
+      ? company.allLocations.some((loc) =>
+          majorCities.includes(loc.toLowerCase())
+        )
+      : false;
+
+    // Include company if it's not primarily in a major city and doesn't have any major city locations
+    return !isPrimaryLocationMajor && !hasAnyMajorLocation;
+  })
+);
 
 // Metadata for the other cities page
 export const metadata: Metadata = {
-  title: "Other cities companies offering equity - Sweat Equity Jobs",
+  title: `${otherCitiesCompaniesForMeta.length} companies offering equity outside of Australian capital cities`,
   description:
     "Find Australian startups in other cities that offer equity as part of your compensation package.",
   metadataBase: new URL("https://equityjobs.com.au"),
   openGraph: {
-    title: "Other cities companies offering equity - Sweat Equity Jobs",
+    title: "200+ Other cities companies offering equity - Sweat Equity Jobs",
     description:
       "Find Australian startups in other cities that offer equity as part of your compensation package.",
     url: "https://equityjobs.com.au/other",
@@ -35,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Other cities companies offering equity - Sweat Equity Jobs",
+    title: "200+ Other cities companies offering equity - Sweat Equity Jobs",
     description:
       "Find Australian startups in other cities that offer equity as part of your compensation package.",
     images: ["/images/open-graph-equity.png"],
@@ -45,16 +76,6 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-
-// Define the major cities to exclude
-const majorCities = [
-  "sydney",
-  "melbourne",
-  "brisbane",
-  "perth",
-  "adelaide",
-  "canberra",
-];
 
 // Helper function to filter companies that are NOT in major cities
 function filterOtherCitiesCompanies(): Company[] {
@@ -118,8 +139,10 @@ function generateOtherCitiesStructuredData(filteredCompanies: Company[]) {
 }
 
 export default function OtherCitiesPage() {
-  // Filter companies for other cities
-  const otherCitiesCompanies = filterOtherCitiesCompanies();
+  // Filter companies for other cities and sort alphabetically
+  const otherCitiesCompanies = sortCompaniesByName(
+    filterOtherCitiesCompanies()
+  );
 
   // Get stats for other cities companies
   const citiesCount = getUniqueCitiesCount(otherCitiesCompanies);
