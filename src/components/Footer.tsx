@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="text-left">
               Made by{" "}
               <Link
-                href="https://www.linkedin.com/in/anthony-stahl-4941637a/"
+                href="http://www.linkedin.com/in/anthony-stahl-"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-700 hover:underline hover:underline-offset-4"
