@@ -3265,14 +3265,10 @@
     "website": "cryptotaxcalculator.io",
     "description": "Easy crypto tax reporting for everyone",
     "year": "2018",
-    "location": "Melbourne",
+    "location": "Remote",
     "workType": "Remote",
     "allLocations": [
-      "Melbourne",
-      "Sydney",
-      "Brisbane",
-      "Perth",
-      "Adelaide"
+      "Remote"
     ],
     "allWorkTypes": [
       "Remote"
@@ -3292,6 +3288,52 @@
     "allWorkTypes": [
       "Remote",
       "Hybrid"
+    ]
+  },
+  {
+    "id": "214",
+    "name": "Big Picture Medical",
+    "website": "bigpicturemedical.com",
+    "description": "Healthcare technology enabling scalable care",
+    "year": "2014",
+    "location": "Remote",
+    "workType": "Remote",
+    "allLocations": [
+      "Remote"
+    ],
+    "allWorkTypes": [
+      "Remote"
+    ]
+  },
+  {
+    "id": "215",
+    "name": "Relume",
+    "website": "relume.io",
+    "description": "Build and design websites faster with AI",
+    "year": "2020",
+    "location": "Sydney",
+    "workType": "On-site",
+    "allLocations": [
+      "Sydney"
+    ],
+    "allWorkTypes": [
+      "On-site",
+      "Hybrid"
+    ]
+  },
+  {
+    "id": "216",
+    "name": "autoSMSF",
+    "website": "autosmsf.com.au",
+    "description": "SMSF tax and compliance made easy",
+    "year": "2023",
+    "location": "Melbourne",
+    "workType": "Remote",
+    "allLocations": [
+      "Melbourne"
+    ],
+    "allWorkTypes": [
+      "Remote"
     ]
   }
 ]
